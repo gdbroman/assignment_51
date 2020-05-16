@@ -1,4 +1,4 @@
-@import 'assets/styles/colors';
+@import '../../assets/styles/colors';
 
 $nav-height: 64px;
 
@@ -12,6 +12,21 @@ nav.header {
     overflow: hidden;
     background-color: $red;
     z-index: 10;
+    padding: 7px 16px;
+}
+nav.header .hamburger {
+    display: inline-block;
+    vertical-align: top;
+    padding:0 8px;
+    cursor: pointer;
+}
+nav.header .hamburger i {
+    line-height: 50px;
+    color:#fff;
+}
+nav.header img.logo {
+    display: inline-block;
+    height: 50px;
 }
 nav.side {
     position: absolute;
