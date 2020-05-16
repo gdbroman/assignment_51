@@ -48,29 +48,53 @@ nav.side li.active i {
 }
 
 //Slide toggle animation 
-aside.show .side {
-    transition: $transition;
-    left: 0;
+@media screen and (min-width:500px) {
+    aside.show .side {
+        width: 240px;
+    }
+    aside.hide .side {
+        width: 72px;
+    }
+    aside.hide .side ul li {
+        height: 72px;
+        padding: 16px 0;
+        text-align: center;
+    }
+    aside.hide .side i {
+        display: block;
+        line-height: 26px;
+        margin: 0 auto 4px auto;
+    }
+    aside.hide .side p {
+        display: block;
+        line-height: 10px;
+        font-size: 9px;
+    }
 }
-aside.hide .side {
-    transition: $transition;
-    left: -240px;
-}
-.overlay {
-    display: none;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: $transition;
-    z-index: 8;
-}
+
 @media screen and (max-width:500px) {
+    .overlay {
+        display: none;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: $transition;
+        z-index: 8;
+    }
+    aside.show .side {
+        transition: $transition;
+        left: 0;
+    }
+    aside.hide .side {
+        transition: $transition;
+        left: -240px;
+    }
     .overlay {
         display: block;
     }
