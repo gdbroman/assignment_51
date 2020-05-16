@@ -1,15 +1,20 @@
 import React from 'react';
 import Nav from './components/nav/Nav';
-import Login from './components/login_page/Login';
-import './App.scss'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from 'react-router-dom';
 
 function App() {
   return (
     <div className="app">
-      <Nav />
-      <div className="page-container">
-        <Login />
-      </div>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route path="/"></Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

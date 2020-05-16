@@ -1,5 +1,6 @@
 import React from 'react';
 import './Nav.scss';
+import { NavLink } from 'react-router-dom';
 
 function Nav() {
   return (
@@ -8,15 +9,17 @@ function Nav() {
         
       </nav>
       <nav className="side">
-        <li>Location</li>
-        <li>Possio Trackers</li>
-        <li>Geo-fences</li>
-        <li>Journeys</li>
-        <li>Events</li>
-        <li>Users</li>
-        <li>Profile</li>
-        <li>Support</li>
-        <li>Log out</li>
+        <ul>
+          <NavLink to ="/" exact={true} activeClassName='active'><li><i class="material-icons">map</i><p>Location</p></li></NavLink>
+          <NavLink to ="/trackers"><li><i class="material-icons">list</i><p>Possio Trackers</p></li></NavLink>
+          <NavLink to ="/fences"><li><i class="material-icons">tab_unselected</i><p>Geo-fences</p></li></NavLink>
+          <NavLink to ="/journeys"><li><i class="material-icons">device_hub</i><p>Journeys</p></li></NavLink>
+          <NavLink to ="/events"><li><i class="material-icons">notifications</i><p>Events</p></li></NavLink>
+          <NavLink to ="/users"><li><i class="material-icons">people</i><p>Users</p></li></NavLink>
+          <NavLink to ="/profile"><li><i class="material-icons">settings</i><p>Profile</p></li></NavLink>
+          <NavLink to ="/support"><li><i class="material-icons">public</i><p>Support</p></li></NavLink>
+          <NavLink to ="/logout"><li><i class="material-icons">exit_to_app</i><p>Log out</p></li></NavLink>
+        </ul>
       </nav>
     </header>
   );
