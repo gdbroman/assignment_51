@@ -4,11 +4,11 @@ import './Login.scss'
 
 
 class Login extends React.Component {
-
   render() { 
     return (
       <div className="login-container">
-        <InputField />
+        <InputField input_type="Username"/>
+        <InputField input_type="Password"/>
       </div>
     );
   }
