@@ -2,7 +2,8 @@ import React from 'react';
 import InputField from './input_field/InputField';
 import './Login.scss'
 
-export default class Login extends React.Component {
+
+class Login extends React.Component {
 
   render() { 
     return (
@@ -12,3 +13,5 @@ export default class Login extends React.Component {
     );
   }
 }
+
+export default Login
