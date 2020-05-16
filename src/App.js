@@ -4,7 +4,8 @@ import Nav from 'components/nav/nav';
 function App() {
   return (
     <div>
-      <Nav />
+      <h1>asdf</h1>
+      <Nav></Nav>
     </div>
   );
 }

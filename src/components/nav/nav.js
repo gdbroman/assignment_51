@@ -4,7 +4,7 @@ import './nav.scss';
 function Nav() {
   return (
     <nav>
-        
+        asdf
     </nav>
   );
 }
