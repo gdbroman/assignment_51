@@ -3,8 +3,11 @@ import './Nav.scss';
 
 function Nav() {
   return (
-    <nav className="header">
-      <ul>
+    <header>
+      <nav className="header">
+        
+      </nav>
+      <nav className="side">
         <li>Location</li>
         <li>Possio Trackers</li>
         <li>Geo-fences</li>
@@ -14,8 +17,8 @@ function Nav() {
         <li>Profile</li>
         <li>Support</li>
         <li>Log out</li>
-      </ul>
-    </nav>
+      </nav>
+    </header>
   );
 }
 
