@@ -1,10 +1,9 @@
 import React from 'react';
-import './nav.scss';
+import './Nav.scss';
 
 function Nav() {
   return (
     <nav>
-        asdf
     </nav>
   );
 }
