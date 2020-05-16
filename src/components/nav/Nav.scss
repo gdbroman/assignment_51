@@ -1,14 +1,60 @@
 @import 'assets/styles/colors';
+
 $nav-height: 64px;
 
 nav.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     height: $nav-height;
     width: 100%;
+    overflow: hidden;
     background-color: $red;
+    z-index: 10;
 }
 nav.side {
     position: absolute;
+    top:0;
+    left: 0;
     height: 100vh;
     width: 240px;
+    padding-top: $nav-height;
     background-color: #fff;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+nav.side ul {
+    padding: 12px 0;
+}
+nav.side ul li {
+    height:40px;
+    width: 100%;
+    line-height: 40px;
+    padding: 0 24px;
+}
+nav.side ul li p {
+    display: inline-block;
+    color:#030303;
+    vertical-align: top;
+    font-size: 14px;
+}
+nav.side li i {
+    color:#606060;
+    line-height: 40px;
+    margin-right: 24px;
+    font-size: 24px;
+}
+nav.side ul li:hover {
+    background-color: #f2f2f2;
+}
+nav.side ul .active li {
+    background-color:#e5e5e5;
+}
+nav.side li.active p {
+    font-weight: 500;
+}
+nav.side li.active i {
+    color: $red;
 }
