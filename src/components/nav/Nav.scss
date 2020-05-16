@@ -1,7 +1,9 @@
 @import 'assets/styles/colors';
-
 nav.header {
     height: 64px;
     width: 100%;
     background-color: $red;
+}
+nav.side {
+    background-color: #fff;
 }
