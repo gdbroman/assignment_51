@@ -30,9 +30,9 @@ nav.side ul li p {
 }
 nav.side li i {
     color:#606060;
-    line-height: 40px;
+    line-height: 38px;
     margin-right: 24px;
-    font-size: 24px;
+    font-size: 22px;
 }
 nav.side ul li:hover {
     background-color: #f2f2f2;
@@ -40,11 +40,14 @@ nav.side ul li:hover {
 nav.side ul .active li {
     background-color:#e5e5e5;
 }
-nav.side li.active p {
+nav.side .active li p, nav.side .active li i {
     font-weight: 500;
-}
-nav.side li.active i {
     color: $red;
+}
+nav.side ul .bb {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
 }
 
 //Slide toggle animation 
@@ -62,8 +65,8 @@ nav.side li.active i {
     }
     aside.hide .side i {
         display: block;
-        line-height: 26px;
-        margin: 0 auto 4px auto;
+        line-height: 24px;
+        margin: 0 auto 6px auto;
     }
     aside.hide .side p {
         display: block;
@@ -90,6 +93,7 @@ nav.side li.active i {
     aside.show .side {
         transition: $transition;
         left: 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     aside.hide .side {
         transition: $transition;
