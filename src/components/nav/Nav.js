@@ -20,7 +20,7 @@ class Nav extends React.Component {
           <div className="hamburger" onClick={this.toggle} >
             <i className="material-icons">dehaze</i>
           </div>
-          <a href="/"><img src={logo} className="logo"/></a>
+          <a href="/"><img src={logo} alt="Possio logo" className="logo"/></a>
         </nav>
         <Side ref={this.sidemenuElement} />
       </header>
