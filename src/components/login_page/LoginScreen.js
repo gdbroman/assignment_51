@@ -1,10 +1,9 @@
 import React from 'react';
-import Login from './login/Login'
-import Signup from './signup/Signup'
+import SignIn from './signin/SignIn'
+import Registration from './registration/Registration'
 import WelcomeBack from './welcome_back/WelcomeBack'
 
 import {
-  BrowserRouter as Router,
   Route,
   Switch,
 } from 'react-router-dom';
@@ -17,9 +16,9 @@ class LoginScreen extends React.Component {
     return ( 
         <div className="login-container">
           <Switch>
+            <Route path="/welcome/signin"><SignIn /></Route>
+            <Route path="/welcome/registration"><Registration /></Route>
             <Route path="/welcome"><WelcomeBack /></Route>
-            <Route path="/welcome/signup"><Signup /></Route>
-            <Route path="/welcome/login"><Login /></Route>
           </Switch>
         </div>
       

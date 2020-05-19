@@ -2,7 +2,7 @@ import React from 'react';
 import InputField from '../input_field/InputField';
 import ThirdPartyLogin from '../third_party_login/ThirdPartyLogin'
 import GoBackButton from '../back_button/GoBackButton'
-import './Signup.scss'
+import './Registration.scss'
 
 
 class Signup extends React.Component {
@@ -14,7 +14,7 @@ class Signup extends React.Component {
         <InputField input_type="Password"/>
         <button className="login-button">SIGN UP</button>
         <ThirdPartyLogin />
-        <GoBackButton />
+        <GoBackButton link="/welcome"/>
       </form>
     );
   }
