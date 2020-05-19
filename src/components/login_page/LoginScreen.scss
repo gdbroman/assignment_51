@@ -1,0 +1,18 @@
+@import '../../assets/styles/colors';
+
+$login-height: 35vh;
+$half-login-height: $login-height / 2;
+
+.login-container {
+    border-radius: 2px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background-color: white;
+    width:90%;
+    max-width:500px;
+    min-width:300px;
+    max-height: $login-height;
+    margin: calc(50vh - #{$half-login-height}) 0 0 0;
+}

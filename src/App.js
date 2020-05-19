@@ -1,5 +1,8 @@
 import React from 'react';
 import Nav from './components/nav/Nav';
+import LoginScreen from './components/login_page/LoginScreen'
+
+import './App.scss'
 import {
   BrowserRouter as Router,
   Route,
@@ -13,6 +16,9 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/"></Route>
+        </Switch>
+        <Switch>
+          <Route path="/welcome"><LoginScreen /></Route>
         </Switch>
       </Router>
     </div>

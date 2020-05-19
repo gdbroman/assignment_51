@@ -1,0 +1,22 @@
+.third-party-button-container {
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+}
+
+.third-party-container{
+    margin-top:20px;
+}
+
+.third-party-login-button {
+    margin: 0 !important;
+    width:49% !important;
+    height:37px !important;
+    font-size:12px !important;
+}
+
+.third-party-text {
+    text-align:center;
+    font-size:12px;
+    color:rgba(0,0,0,0.2);
+}
