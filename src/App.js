@@ -4,6 +4,7 @@ import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { createBrowserHistory } from 'history';
 import LoadingBar from 'react-top-loading-bar';
+import LoginScreen from './components/login_page/LoginScreen';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,6 +38,9 @@ class App extends React.Component {
           <Route path="/support"></Route>
           <Route path="/logout"></Route>
         </Switch>
+        <Switch>
+          <Route path="/welcome"><LoginScreen /></Route>
+        </Switch>
       </Router>
     );
   }
@@ -47,19 +51,6 @@ class App extends React.Component {
         <div className="lb">
           <LoadingBar onRef={ref => (this.LoadingBar = ref)} height={3} color='#fff' />
         </div>
-        <div className="btns">
-          <button onClick={() => this.LoadingBar.continuousStart()}>
-            Start Continuous Bar Loading
-          </button>
-          <button onClick={() => this.LoadingBar.staticStart()}>
-            Start Static Bar Loading
-          </button>
-          <button onClick={() => this.LoadingBar.complete()}>Complete</button>
-          <br />
-          <button onClick={() => this.LoadingBar.add(10)}>Add 10</button>
-          <button onClick={() => this.LoadingBar.add(30)}>Add 30</button>
-        </div>
-        {this.state.isLoading ? () => this.LoadingBar.continuousStart() : this.renderRouter()}
       </div>
     );
   }

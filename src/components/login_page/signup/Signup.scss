@@ -1,0 +1,24 @@
+@import '../../../assets/styles/colors';
+
+.login-form {
+    width:80%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.login-button {
+    border-radius:2px;
+    width:100%;
+    height:35px;
+    margin: auto;
+    background-color:$red;
+    color:$grey;
+    border:None;   
+}
+
+.forgot-password-text {
+    font-size:14px;
+    margin: 10px 0 10px 0;
+    text-align:center;
+}
