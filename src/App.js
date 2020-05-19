@@ -38,18 +38,20 @@ class App extends React.Component {
     return (
       <Router >
         <Nav />
-        <Switch>
-          <Route path="/trackers"></Route>
-          <Route path="/fences"></Route>
-          <Route path="/journeys"></Route>
-          <Route path="/events"></Route>
-          <Route path="/users"></Route>
-          <Route path="/profile"></Route>
-          <Route path="/support"></Route>
-          <Route path="/logout"></Route>
-          <Route path="/welcome"><LoginScreen /></Route>
-          <Route path="/"></Route>
-        </Switch>
+        <div className="page-container">
+          <Switch>
+            <Route path="/trackers"></Route>
+            <Route path="/fences"></Route>
+            <Route path="/journeys"></Route>
+            <Route path="/events"></Route>
+            <Route path="/users"></Route>
+            <Route path="/profile"></Route>
+            <Route path="/support"></Route>
+            <Route path="/logout"></Route>
+            <Route path="/welcome"><LoginScreen /></Route>
+            <Route path="/"></Route>
+          </Switch>
+        </div>
       </Router>
     );
   }
