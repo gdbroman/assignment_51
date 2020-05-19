@@ -37,8 +37,6 @@ class App extends React.Component {
           <Route path="/profile"></Route>
           <Route path="/support"></Route>
           <Route path="/logout"></Route>
-        </Switch>
-        <Switch>
           <Route path="/welcome"><LoginScreen /></Route>
         </Switch>
       </Router>
