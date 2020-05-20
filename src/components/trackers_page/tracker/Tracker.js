@@ -6,9 +6,9 @@ import './Tracker.scss'
 class Tracker extends React.Component {
   render() { 
     return (  
-      <React.Fragment>
+      <div>
         <p>teeeeeeeeeeeeeeeeeeeeeeeeeee</p>
-      </React.Fragment>
+      </div>
     );
   }
 }

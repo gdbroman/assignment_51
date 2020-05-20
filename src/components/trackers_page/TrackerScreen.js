@@ -1,7 +1,6 @@
 import React from 'react';
-import SignIn from './signin/SignIn'
-import Registration from './registration/Registration'
 import Tracker from './tracker/Tracker'
+import Content from '../content/Content'
 
 import {
   Route,
@@ -14,13 +13,13 @@ import './TrackerScreen.scss'
 class TrackerScreen extends React.Component {
   render() { 
     return ( 
-        <div className="tracker-container">
+        <Content>
           <Switch>
-            <Route path="/trackers/signin"><SignIn /></Route>
-            <Route path="/trackers/registration"><Registration /></Route>
+            <Route path="/trackers/signin"></Route>
+            <Route path="/trackers/registration"></Route>
             <Route path="/trackers"><Tracker /></Route>
           </Switch>
-        </div>
+        </Content>
       
     );
   }
