@@ -8,8 +8,16 @@
     height: 100vh;
 }
 section.main {
+  display: flex;
   width: 100vw;
   height: 100vh;
   text-align: center;
   padding-top: 64px;
+}
+section.content {
+  flex-grow: 1;
+  position: relative;
+}
+.lb {
+  position: absolute;
 }

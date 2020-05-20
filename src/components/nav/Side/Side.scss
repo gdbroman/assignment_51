@@ -2,16 +2,13 @@
 $transition: 0.24s cubic-bezier(0.4, 0, 0.2, 1);
 
 nav.side {
-    position: absolute;
-    top:0;
-    left: 0;
-    height: 100vh;
+    height: calc(100vh - 64px);
     width: 240px;
-    padding-top: $nav-height;
     background-color: #fff;
     z-index: 9;
     overflow-x: hidden;
     overflow-y: auto;
+    text-align: left;
 }
 nav.side ul {
     padding: 12px 0;
@@ -76,6 +73,9 @@ nav.side ul .bb {
 }
 
 @media screen and (max-width:500px) {
+    aside .side {
+        position: absolute;
+    }
     .overlay {
         display: none;
         opacity: 0;
