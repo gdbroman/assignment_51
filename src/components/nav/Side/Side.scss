@@ -30,11 +30,15 @@ nav.side li i {
     line-height: 38px;
     margin-right: 24px;
     font-size: 22px;
+    transition: $transition;
 }
 nav.side ul li:hover {
     background-color: #f2f2f2;
 }
 nav.side ul .active li {
+    background-color:#e5e5e5;
+}
+nav.side ul li:active {
     background-color:#e5e5e5;
 }
 nav.side .active li p, nav.side .active li i {
