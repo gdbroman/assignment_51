@@ -41,17 +41,21 @@ class App extends React.Component {
           <Switch>
             <Route path="/login" component={Login}></Route>
             <Route path="/" component={Nav}>
-              <Nav />
               <section className="main">
-                <Route path="/location" />
-                <Route path="/trackers" />
-                <Route path="/fences" />
-                <Route path="/journeys" />
-                <Route path="/events" />
-                <Route path="/users" />
-                <Route path="/profile" />
-                <Route path="/support" />
-                <Route path="/logout" />
+                <Nav />
+                <section className="content">
+                  <Route path="/location">
+                    <h1>Location</h1>
+                  </Route>
+                  <Route path="/trackers" />
+                  <Route path="/fences" />
+                  <Route path="/journeys" />
+                  <Route path="/events" />
+                  <Route path="/users" />
+                  <Route path="/profile" />
+                  <Route path="/support" />
+                  <Route path="/logout" />
+                </section>
               </section>
             </Route>
           </Switch>
