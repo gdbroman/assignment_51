@@ -1,11 +1,10 @@
 import React from 'react';
-import Tracker from './tracker/Tracker'
+import TrackersContent from './active/TrackersContent'
 import Content from '../../content/Content'
 import { Route, Switch, } from 'react-router-dom';
 import './TrackerScreen.scss'
 
-
-class TrackerScreen extends React.Component {
+class TrackerPage extends React.Component {
   componentDidMount() {
     document.title = 'Trackers | Possio Alarm';
   }
@@ -16,11 +15,11 @@ class TrackerScreen extends React.Component {
         <Switch>
           <Route path="/trackers/signin"></Route>
           <Route path="/trackers/registration"></Route>
-          <Route path="/trackers"><Tracker /></Route>
+          <Route path="/trackers"><TrackersContent /></Route>
         </Switch>
       </Content>
     );
   }
 }
 
-export default TrackerScreen
+export default TrackerPage

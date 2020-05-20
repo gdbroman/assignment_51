@@ -1,9 +1,9 @@
 import React from 'react';
 
-import './Tracker.scss'
+import './TrackersContent.scss'
 
 
-class Tracker extends React.Component {
+class TrackersContent extends React.Component {
   render() { 
     return (  
       <div>
@@ -13,4 +13,4 @@ class Tracker extends React.Component {
   }
 }
 
-export default Tracker
+export default TrackersContent
