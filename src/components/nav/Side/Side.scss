@@ -92,7 +92,7 @@ nav.side ul .bb {
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.4);
         transition: $transition;
-        z-index: 8;
+        z-index: -1;
     }
     aside.show .side {
         transition: $transition;
@@ -108,5 +108,6 @@ nav.side ul .bb {
     }
     .overlay.show {
         opacity: 1;
+        z-index: 8;
     }
 }
