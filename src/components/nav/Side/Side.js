@@ -7,6 +7,7 @@ class Side extends React.Component {
         super(props);
         this.state = {
             active: true,
+            small: true,
         };
     }
 
@@ -15,10 +16,15 @@ class Side extends React.Component {
         this.setState({ active: !currentState });
     };
 
+    minimize = () => {
+        const currentSize = this.state.small;
+        this.setState({ small: !currentSize });
+    };
+
     render() {
         return (
             <aside className={this.state.active ? "show": "hide"} >
-                <nav className="side">
+                <nav className={this.state.small ? "side small": "side"} >
                     <ul>
                     <NavLink to ="/location" exact={true} activeClassName='active'>
                         <li onClick={this.slide}><i className="material-icons">map</i><p>Location</p></li>
