@@ -14,7 +14,7 @@ class Login extends React.Component {
         <button className="login-button">SIGN IN</button>
         <p className="forgot-password-text">Forgot password?</p>
         <ThirdPartyLogin />
-        <GoBackButton link="/welcome"/>
+        <GoBackButton link="/login"/>
       </form>
     );
   }

@@ -14,7 +14,7 @@ class Signup extends React.Component {
         <InputField input_type="Password"/>
         <button className="login-button">SIGN UP</button>
         <ThirdPartyLogin />
-        <GoBackButton link="/welcome"/>
+        <GoBackButton link="/login"/>
       </form>
     );
   }

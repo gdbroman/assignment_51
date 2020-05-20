@@ -15,9 +15,9 @@ class LoginScreen extends React.Component {
   render() { 
     return ( 
         <div className="login-container">
-          <Route path="/signin"><SignIn /></Route>
-          <Route path="/registration"><Registration /></Route>
-          <Route path="/"><WelcomeBack /></Route>
+          <Route path="/login/signin"><SignIn /></Route>
+          <Route path="/login/registration"><Registration /></Route>
+          <Route exact path="/login"><WelcomeBack /></Route>
         </div>
       
     );
