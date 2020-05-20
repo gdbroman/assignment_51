@@ -1,11 +1,7 @@
 @import '../../assets/styles/colors';
 @import '../../assets/styles/margins';
 
-<<<<<<< HEAD
-$full-height: 100vh;
-=======
 $min-height: calc(100% - #{$content-margin-top*2});
->>>>>>> 1cb15fdf9e876092b4d19fb4c7f57699951b3ba4
 
 .tracker-container {
     border-radius: 2px;
@@ -17,9 +13,6 @@ $min-height: calc(100% - #{$content-margin-top*2});
     width:90%;
     max-width:1000px;
     min-width:300px;
-<<<<<<< HEAD
-=======
     min-height: $min-height;
     margin-top: 50px;
->>>>>>> 1cb15fdf9e876092b4d19fb4c7f57699951b3ba4
 }
