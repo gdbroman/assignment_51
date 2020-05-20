@@ -2,6 +2,9 @@ import React from 'react';
 import './Location.scss';
 
 class Location_page extends React.Component {
+  componentDidMount() {
+    document.title = 'Location | Possio Alarm';
+  }
 
   render() {
     return (

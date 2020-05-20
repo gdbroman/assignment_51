@@ -2,8 +2,11 @@ import React from 'react';
 import LoginOption from '../login_option/LoginOption'
 import './WelcomeBack.scss'
 
-
 class Login extends React.Component {
+  componentDidMount() {
+    document.title = 'Welcome | Possio Alarm';
+  }
+
   render() { 
     return (  
       <React.Fragment>

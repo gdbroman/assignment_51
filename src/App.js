@@ -55,15 +55,15 @@ class App extends React.Component {
                 <Nav />
                 <section className="content">
                   <Redirect exact from='/' to='/location'/>
-                  <Route path="/location" component={Location_page} />
-                  <Route path="/trackers" component={Trackers_page} />
-                  <Route path="/fences" component={Fences_page} />
-                  <Route path="/journeys" component={Journeys_page} />
-                  <Route path="/events" component={Events_page} />
-                  <Route path="/users" component={Users_page} />
-                  <Route path="/profile" component={Profile_page} />
-                  <Route path="/support" component={Support_page} />
-                  <Route path="/logout" component={Logout_page} />
+                  <Route path="/location" component={Location_page} title="Location" />
+                  <Route path="/trackers" component={Trackers_page} title="Trackers" />
+                  <Route path="/fences" component={Fences_page} title="Fences" />
+                  <Route path="/journeys" component={Journeys_page} title="Journeys" />
+                  <Route path="/events" component={Events_page} title="Events" />
+                  <Route path="/users" component={Users_page} title="Users" />
+                  <Route path="/profile" component={Profile_page} title="Profile" />
+                  <Route path="/support" component={Support_page} title="Support" />
+                  <Route path="/logout" component={Logout_page} title="Logout" />
                 </section>
               </section>
             </Route>
