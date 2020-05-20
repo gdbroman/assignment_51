@@ -2,6 +2,9 @@ import React from 'react';
 import './Journeys.scss';
 
 class Journeys_page extends React.Component {
+  componentDidMount() {
+    document.title = 'Journeys | Possio Alarm';
+  }
 
   render() {
     return (

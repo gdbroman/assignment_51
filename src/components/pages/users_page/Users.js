@@ -2,6 +2,9 @@ import React from 'react';
 import './Users.scss';
 
 class Users_page extends React.Component {
+  componentDidMount() {
+    document.title = 'Users | Possio Alarm';
+  }
 
   render() {
     return (

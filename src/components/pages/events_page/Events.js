@@ -2,6 +2,9 @@ import React from 'react';
 import './Events.scss';
 
 class Events_page extends React.Component {
+  componentDidMount() {
+    document.title = 'Events | Possio Alarm';
+  }
 
   render() {
     return (

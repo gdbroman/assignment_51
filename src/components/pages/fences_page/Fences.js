@@ -2,6 +2,9 @@ import React from 'react';
 import './Fences.scss';
 
 class Fences_page extends React.Component {
+  componentDidMount() {
+    document.title = 'Fences | Possio Alarm';
+  }
 
   render() {
     return (

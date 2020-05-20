@@ -2,6 +2,9 @@ import React from 'react';
 import './Support.scss';
 
 class Support_page extends React.Component {
+  componentDidMount() {
+    document.title = 'Support | Possio Alarm';
+  }
 
   render() {
     return (
