@@ -1,5 +1,5 @@
 import React from 'react';
-import Tracker from './tracker/Tracker'
+import TrackersContent from './active/TrackersContent'
 import Content from '../../content/Content'
 
 import {
@@ -7,17 +7,17 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import './TrackerScreen.scss'
+import './Trackers.scss'
 
 
-class TrackerScreen extends React.Component {
+class TrackerPage extends React.Component {
   render() { 
     return ( 
         <Content>
           <Switch>
             <Route path="/trackers/signin"></Route>
             <Route path="/trackers/registration"></Route>
-            <Route path="/trackers"><Tracker /></Route>
+            <Route path="/trackers"><TrackersContent /></Route>
           </Switch>
         </Content>
       
@@ -25,4 +25,4 @@ class TrackerScreen extends React.Component {
   }
 }
 
-export default TrackerScreen
+export default TrackerPage

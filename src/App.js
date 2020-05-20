@@ -6,7 +6,7 @@ import LoadingBar from 'react-top-loading-bar';
 import Login from './components/pages/login_page/LoginScreen';
 //Pages
 import Location_page from './components/pages/location_page/Location';
-import Trackers_page from './components/pages/trackers_page/TrackerScreen';
+import TrackersPage from './components/pages/trackers_page/Trackers';
 import Fences_page from './components/pages/fences_page/Fences';
 import Journeys_page from './components/pages/journeys_page/Journeys';
 import Events_page from './components/pages/events_page/Events';
@@ -56,7 +56,7 @@ class App extends React.Component {
                 <section className="content">
                   <Redirect exact from='/' to='/location'/>
                   <Route path="/location" component={Location_page} title="Location" />
-                  <Route path="/trackers" component={Trackers_page} title="Trackers" />
+                  <Route path="/trackers" component={TrackersPage} title="Trackers" />
                   <Route path="/fences" component={Fences_page} title="Fences" />
                   <Route path="/journeys" component={Journeys_page} title="Journeys" />
                   <Route path="/events" component={Events_page} title="Events" />
