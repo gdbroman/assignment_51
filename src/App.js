@@ -3,17 +3,17 @@ import Nav from './components/nav/Nav';
 import './App.scss';
 import { BrowserRouter as Router, Redirect, Switch, Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar';
-import Login from './components/login_page/LoginScreen';
+import Login from './components/pages/login_page/LoginScreen';
 //Pages
-import Location_page from './components/location_page/Location';
-import Trackers_page from './components/trackers_page/TrackerScreen';
-import Fences_page from './components/fences_page/Fences';
-import Journeys_page from './components/journeys_page/Journeys';
-import Events_page from './components/events_page/Events';
-import Users_page from './components/users_page/Users';
-import Profile_page from './components/profile_page/Profile';
-import Support_page from './components/support_page/Support';
-import Logout_page from './components/logout_page/Logout';
+import Location_page from './components/pages/location_page/Location';
+import Trackers_page from './components/pages/trackers_page/TrackerScreen';
+import Fences_page from './components/pages/fences_page/Fences';
+import Journeys_page from './components/pages/journeys_page/Journeys';
+import Events_page from './components/pages/events_page/Events';
+import Users_page from './components/pages/users_page/Users';
+import Profile_page from './components/pages/profile_page/Profile';
+import Support_page from './components/pages/support_page/Support';
+import Logout_page from './components/pages/logout_page/Logout';
 
 class App extends React.Component {
   constructor(props) {

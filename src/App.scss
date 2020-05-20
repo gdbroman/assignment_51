@@ -1,3 +1,5 @@
+@import './components/nav/Nav.scss';
+
 .page-container {
   display:flex;
   justify-content: center;
@@ -12,7 +14,7 @@ section.main {
   width: 100vw;
   height: 100vh;
   text-align: center;
-  padding-top: 64px;
+  padding-top: $nav-height;
 }
 section.content {
   flex-grow: 1;
