@@ -20,7 +20,7 @@ class Side extends React.Component {
             <aside className={this.state.active ? "show": "hide"} >
                 <nav className="side">
                     <ul>
-                    <NavLink to ="/" exact={true} activeClassName='active'>
+                    <NavLink to ="/location" exact={true} activeClassName='active'>
                         <li><i className="material-icons">map</i><p>Location</p></li>
                     </NavLink>
                     <NavLink to ="/trackers">
@@ -47,7 +47,7 @@ class Side extends React.Component {
                     <NavLink to ="/logout">
                         <li><i className="material-icons">exit_to_app</i><p>Log out</p></li>
                     </NavLink>
-                    <NavLink to ="/welcome">
+                    <NavLink to ="/login">
                         <li><i className="material-icons">people</i><p>Log in</p></li>
                     </NavLink>
                     </ul>

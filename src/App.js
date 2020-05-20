@@ -3,7 +3,7 @@ import Nav from './components/nav/Nav';
 import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar';
-import LoginScreen from './components/login_page/LoginScreen';
+import Login from './components/login_page/LoginScreen';
 
 class App extends React.Component {
   constructor(props) {
@@ -37,19 +37,23 @@ class App extends React.Component {
   renderRouter () {
     return (
       <Router >
-        <Nav />
         <div className="page-container">
           <Switch>
-            <Route path="/trackers"></Route>
-            <Route path="/fences"></Route>
-            <Route path="/journeys"></Route>
-            <Route path="/events"></Route>
-            <Route path="/users"></Route>
-            <Route path="/profile"></Route>
-            <Route path="/support"></Route>
-            <Route path="/logout"></Route>
-            <Route path="/welcome"><LoginScreen /></Route>
-            <Route path="/"></Route>
+            <Route path="/login" component={Login}></Route>
+            <Route path="/" component={Nav}>
+              <Nav />
+              <section className="main">
+                <Route path="/location" />
+                <Route path="/trackers" />
+                <Route path="/fences" />
+                <Route path="/journeys" />
+                <Route path="/events" />
+                <Route path="/users" />
+                <Route path="/profile" />
+                <Route path="/support" />
+                <Route path="/logout" />
+              </section>
+            </Route>
           </Switch>
         </div>
       </Router>
