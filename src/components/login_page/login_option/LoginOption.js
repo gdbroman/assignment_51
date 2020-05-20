@@ -8,7 +8,7 @@ class LoginOption extends React.Component {
   render() { 
     return (  
       <React.Fragment>
-        <Link className="login-option" to={'/welcome/' + this.props.link}>{this.props.text}</Link>
+        <Link className="login-option" to={'/login/' + this.props.link}>{this.props.text}</Link>
       </React.Fragment>
     );
   }
