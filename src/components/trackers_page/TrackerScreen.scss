@@ -1,7 +1,7 @@
 @import '../../assets/styles/colors';
 
 $full-height: 100vh;
-$min-height: $login-height * 0.95;
+$min-height: $full-height * 0.95;
 
 .tracker-container {
     border-radius: 2px;
@@ -13,6 +13,6 @@ $min-height: $login-height * 0.95;
     width:90%;
     max-width:500px;
     min-width:300px;
-    min-height: $login-height;
-    margin: calc(50vh - #{$half-login-height}) 0 0 0;
+    min-height: $min-height;
+    margin: 5% 0 0 0;
 }

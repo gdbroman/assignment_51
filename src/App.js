@@ -4,6 +4,8 @@ import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar';
 import Login from './components/login_page/LoginScreen';
+import TrackerScreen from './components/trackers_page/TrackerScreen' 
+
 
 class App extends React.Component {
   constructor(props) {
@@ -44,7 +46,7 @@ class App extends React.Component {
               <Nav />
               <section className="main">
                 <Route path="/location" />
-                <Route path="/trackers" />
+                <Route path="/trackers" component={TrackerScreen}/>
                 <Route path="/fences" />
                 <Route path="/journeys" />
                 <Route path="/events" />
