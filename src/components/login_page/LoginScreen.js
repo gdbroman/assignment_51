@@ -4,7 +4,6 @@ import Registration from './registration/Registration'
 import WelcomeBack from './welcome_back/WelcomeBack'
 
 import {
-  BrowserRouter as Router,
   Route,
   Switch,
 } from 'react-router-dom';
