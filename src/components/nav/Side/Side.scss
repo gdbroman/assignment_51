@@ -2,7 +2,7 @@
 $transition: 0.24s cubic-bezier(0.4, 0, 0.2, 1);
 
 nav.side {
-    height: calc(100vh - 64px);
+    height: calc(100vh - #{$nav-height});
     width: 240px;
     background-color: #fff;
     z-index: 9;
