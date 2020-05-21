@@ -11,6 +11,9 @@ footer.tab {
     overflow: hidden;
     z-index:2;
 }
+footer.tab * {
+    user-select: none;
+}
 footer.tab.up {
     height: 50%;
     overflow-y: auto;
@@ -33,7 +36,6 @@ footer.tab.up {
 .prevnext p.pn {
     cursor:pointer;
     border-radius: 2px;
-    user-select: none;
 }
 .prevnext p.prev {
     float:left;
@@ -68,6 +70,13 @@ footer.tab.up {
 }
 .tab button.button {
     margin-top: 0;
+}
+
+.settings {
+    display: none;
+}
+.settings.show {
+    display: block
 }
 
 @media screen and (max-width:500px) {

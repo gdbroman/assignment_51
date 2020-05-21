@@ -9,7 +9,7 @@ class Tab_page extends React.Component {
     super(props);
     this.state = {
         up: false,
-        showSettings: true,
+        show_settings: false,
     }
   }
 
@@ -23,15 +23,14 @@ class Tab_page extends React.Component {
   }
   
   showSettings = () => {
-    this.setState({showSettings: true});
+    this.setState({ show_settings: true});
+  }
+
+  hideSettings = () => {
+    this.setState({ show_settings: false});
   }
 
   render() {
-    let vs;
-    if (this.state.showSettings) {
-      vs = <VehicleSettings />;
-    }
-
     return (
       <footer className={this.state.up ? "tab up": "tab"}>
           <div className="prevnext">
@@ -54,7 +53,9 @@ class Tab_page extends React.Component {
           <div className="li" onClick={this.showSettings}>
             <p>Settings</p>
           </div>
-          {vs}
+          <section className={this.state.show_settings ? "settings show": "settings"}>
+            <VehicleSettings func={this.hideSettings} />
+          </section>
       </footer>
     );
   }

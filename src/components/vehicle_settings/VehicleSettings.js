@@ -4,9 +4,9 @@ import './VehicleSettings.scss';
 class VehicleSettings extends React.Component {
     render() {
         return (
-            <div className="vs" >
+            <div className="vs">
                 <div className="title">
-                    <span className="material-icons">arrow_back</span>
+                    <div className="icon" onClick={this.props.func}><span className="material-icons">arrow_back</span></div>
                     <h1>Settings</h1>
                 </div>
             </div>

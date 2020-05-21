@@ -15,10 +15,15 @@
     border-bottom: 1px solid $border-color;
     text-align: left;
 }
-.vs .title span {
+.vs .title .icon {
     display: inline-block;
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.vs .title .icon span {
     line-height: 50px;
-    margin: 0 20px;
 }
 .vs .title h1 {
     display: inline-block;
