@@ -1,5 +1,4 @@
-import React from 'react';
-import StatusButton from '../status_button/StatusButton' 
+import React from 'react'; 
 import Vehicle from '../../../../components/vehicle/Vehicle'
 
 import './TrackersContent.scss'
