@@ -3,13 +3,13 @@ import './Location.scss';
 import Tab from './tab/Tab';
 import Map from './map/Map';
 
-class Location_page extends React.Component {
+class LocationPage extends React.Component {
   componentDidMount() {
     document.title = 'Location | Possio Alarm';
   }
 
   render() {
-    const tab = <Tab />;
+    const tab = <Tab vehicles={this.props.vehicles} />;
     return (
       <div className="location_page">
           <Map tab={tab} />
@@ -19,4 +19,4 @@ class Location_page extends React.Component {
   }
 }
 
-export default Location_page;
+export default LocationPage;

@@ -11,21 +11,6 @@ import {
 import './TrackersPage.scss'
 
 class TrackerPage extends React.Component {
-  constructor(props) {
-    super()
-    this.state = {
-      vehicles: {
-        active: [
-          {name: 'Ture', date: '2017-98', ts: '231'},
-          {name: 'Clas', date: '201227-98', ts: '221'}
-        ],
-        disabled: [
-          {name: 'Hans', date: '1982-98', ts: '6969'},
-          {name: 'Greta', date: '2027-98', ts: '420'}
-        ]
-      }
-    }
-  }
 
   render() { 
     return ( 
@@ -35,8 +20,8 @@ class TrackerPage extends React.Component {
             <StatusButton status_link="disabled" status_title="Disabled" />
           </div>
           <Switch>
-            <Route path="/trackers/active"> <TrackersContent vehicles={this.state.vehicles.active} /> </Route>
-            <Route path="/trackers/disabled">  <TrackersContent  vehicles={this.state.vehicles.active} /> </Route>
+            <Route path="/trackers/active"> <TrackersContent vehicles={this.props.vehicles.active} /> </Route>
+            <Route path="/trackers/disabled">  <TrackersContent  vehicles={this.props.vehicles.disabled} /> </Route>
           </Switch>
         </Content>
       

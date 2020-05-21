@@ -1,7 +1,7 @@
 import React from 'react';
 import './Profile.scss';
 
-class Profile_page extends React.Component {
+class ProfilePage extends React.Component {
   componentDidMount() {
     document.title = 'Profile | Possio Alarm';
   }
@@ -15,4 +15,4 @@ class Profile_page extends React.Component {
   }
 }
 
-export default Profile_page;
+export default ProfilePage;

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Journeys.scss';
 
-class Journeys_page extends React.Component {
+class JourneysPage extends React.Component {
   componentDidMount() {
     document.title = 'Journeys | Possio Alarm';
   }
@@ -15,4 +15,4 @@ class Journeys_page extends React.Component {
   }
 }
 
-export default Journeys_page;
+export default JourneysPage;

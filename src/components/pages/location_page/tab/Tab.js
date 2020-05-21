@@ -30,7 +30,7 @@ class Tab_page extends React.Component {
           </div>
           <div className="vehicle-container">
             <div onClick={this.toggle}>
-              <Vehicle />
+              <Vehicle info={this.props.vehicles.active[0]}/>
             </div>
             <div className="buttons">
               <Button text="Request Location" />

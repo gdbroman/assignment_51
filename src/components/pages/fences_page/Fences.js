@@ -1,7 +1,7 @@
 import React from 'react';
 import './Fences.scss';
 
-class Fences_page extends React.Component {
+class FencesPage extends React.Component {
   componentDidMount() {
     document.title = 'Fences | Possio Alarm';
   }
@@ -15,4 +15,4 @@ class Fences_page extends React.Component {
   }
 }
 
-export default Fences_page;
+export default FencesPage;

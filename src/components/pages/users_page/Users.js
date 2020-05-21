@@ -1,7 +1,7 @@
 import React from 'react';
 import './Users.scss';
 
-class Users_page extends React.Component {
+class UsersPage extends React.Component {
   componentDidMount() {
     document.title = 'Users | Possio Alarm';
   }
@@ -15,4 +15,4 @@ class Users_page extends React.Component {
   }
 }
 
-export default Users_page;
+export default UsersPage;
