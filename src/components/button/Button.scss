@@ -15,3 +15,10 @@ button.button p {
     color:#fff;
     text-transform: uppercase;
 }
+
+@media screen and (max-width:500px) {
+    button.button {
+        margin: 10px;
+        width: calc(100% - 20px);
+    }
+}
