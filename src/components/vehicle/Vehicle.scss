@@ -1,7 +1,7 @@
 @import '../../assets/styles/colors';
 
 $height: 50px;
-$height-outer:90px;
+$height-outer:100px;
 
 .vehicle {
     position: relative;
@@ -22,7 +22,7 @@ $height-outer:90px;
     width: $height;
     height: $height;
     line-height: $height;
-    font-size: 28px;
+    font-size: 40px;
     color:#4caf50;
     text-align: center;
     vertical-align: top;
@@ -32,17 +32,37 @@ $height-outer:90px;
     flex-grow: 1;
     height: $height;
     max-width: 100%;
-    padding-left: 10px;
+    padding-left: 20px;
     line-height: 20px;
     text-align: left;
 }
 .vehicle .text .name {
-    color:#0d0d0d;
-    font-size: 17px;
-    margin-top:8px;
+    color:hsl(0, 0%, 5%);
+    font-size:13px;
+    margin-top: 10px;
 }
 .vehicle .text .date {
-    font-size: 15px;
+    font-size: 11px;
+}
+
+.vehicle-additional-text-container {
+    font-size:12px;
+}
+
+.vehicle-additional-text {
+    display:inline;
+}
+
+.vehicle-additional-text + .vehicle-additional-text {
+    margin-left:15px;
+}
+
+.green {
+    color:green;
+}
+
+.fat {
+    font-weight: 500;
 }
 
 @media screen and (max-width:500px) {
