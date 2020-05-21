@@ -25,6 +25,18 @@ class Tab_page extends React.Component {
           </div>
           <div className="vehicle-container" onClick={this.toggle}>
             <Vehicle />
+            <button>
+              Request Location
+            </button>
+            <button>
+              Share Location
+            </button>
+          </div>
+          <div className="li">
+            <p>Location History</p>
+          </div>
+          <div className="li">
+            <p>Settings</p>
           </div>
       </footer>
     );
