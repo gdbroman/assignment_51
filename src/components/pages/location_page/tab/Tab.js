@@ -1,6 +1,7 @@
 import React from 'react';
 import './Tab.scss';
 import Vehicle from  '../../../vehicle/Vehicle';
+import Button from  '../../../button/Button';
 
 class Tab_page extends React.Component {
   constructor(props) {
@@ -25,12 +26,10 @@ class Tab_page extends React.Component {
           </div>
           <div className="vehicle-container" onClick={this.toggle}>
             <Vehicle />
-            <button>
-              Request Location
-            </button>
-            <button>
-              Share Location
-            </button>
+            <div className="buttons">
+              <Button text="Request Location" />
+              <Button text="Share Location" />
+            </div>
           </div>
           <div className="li">
             <p>Location History</p>
