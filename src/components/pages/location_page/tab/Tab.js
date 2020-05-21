@@ -39,6 +39,7 @@ class Tab_page extends React.Component {
           <div className="li">
             <p>Settings</p>
           </div>
+          <div className="outide"></div>
       </footer>
     );
   }

@@ -1,13 +1,15 @@
 $height: 50px;
+$height-outer:90px;
 
 .vehicle {
     position: relative;
-    display: flex;
-    margin: 20px auto;
-    padding: 0 20px;
-    height: $height;
+    display: block;
+    padding: 20px;
+    height: $height-outer;
+    width: 100%;
     vertical-align: middle;
     cursor: pointer;
+    text-align: left;
 }
 .vehicle:hover {
     background-color: #eee;
@@ -19,6 +21,8 @@ $height: 50px;
     line-height: $height;
     font-size: 28px;
     color:#4caf50;
+    text-align: center;
+    vertical-align: top;
 }
 .vehicle .text {
     display: inline-block;
@@ -36,4 +40,11 @@ $height: 50px;
 }
 .vehicle .text .date {
     font-size: 15px;
+}
+
+@media screen and (max-width:500px) {
+    .vehicle {
+        height:70px;
+        padding: 10px 20px;
+    }
 }
