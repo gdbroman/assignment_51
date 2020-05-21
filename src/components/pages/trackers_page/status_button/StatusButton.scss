@@ -1,3 +1,19 @@
+@import '../../../../assets/styles/colors';
+
 .device-status-button {
-    flex: 1
+    flex: 1;
+    display:flex;
+    background-color: $red;
+    color:white;
+    font-size:18px;
+    justify-content: center;
+    align-items: center;
+    border-bottom:solid;
+    border-bottom-color:rgba($color: #000000, $alpha: 0.15);
+    border-bottom-width:4px;
+    border-collapse: collapse;
+}
+
+.status-button-active {
+    background-color: lighten($red, 3%);
 }
