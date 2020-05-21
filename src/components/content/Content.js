@@ -6,7 +6,7 @@ import './Content.scss'
 class Content extends React.Component {
   render() { 
     return ( 
-        <div className="tracker-container page-flex-container">
+        <div className="content-container page-flex-container">
           {this.props.children}
         </div>
       
