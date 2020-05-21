@@ -7,8 +7,8 @@ import './TrackersContent.scss'
 
 class TrackersContent extends React.Component {
   getVehicles(){
-    return this.props.state.vehicles.map((v) => {
-      return <Vehicle metadata={v} />
+    return this.props.vehicles.map((v) => {
+      return <Vehicle info={v} />
     })
   }
   render() { 

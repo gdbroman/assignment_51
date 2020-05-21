@@ -1,3 +1,5 @@
+@import '../../assets/styles/colors';
+
 $height: 50px;
 $height-outer:90px;
 
@@ -10,6 +12,7 @@ $height-outer:90px;
     vertical-align: middle;
     cursor: pointer;
     text-align: left;
+    border-bottom: solid 1px $border-color;
 }
 .vehicle:hover {
     background-color: #eee;

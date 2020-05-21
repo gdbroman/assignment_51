@@ -3,23 +3,33 @@ import Nav from './components/nav/Nav';
 import './App.scss';
 import { BrowserRouter as Router, Redirect, Switch, Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar';
-import Login from './components/pages/login_page/LoginScreen';
-//Pages
-import Location_page from './components/pages/location_page/Location';
+import Login from './components/pages/login_page/Login';
+
+import LocationPage from './components/pages/location_page/Location';
 import TrackersPage from './components/pages/trackers_page/TrackersPage';
-import Fences_page from './components/pages/fences_page/Fences';
-import Journeys_page from './components/pages/journeys_page/Journeys';
-import Events_page from './components/pages/events_page/Events';
-import Users_page from './components/pages/users_page/Users';
-import Profile_page from './components/pages/profile_page/Profile';
-import Support_page from './components/pages/support_page/Support';
-import Logout_page from './components/pages/logout_page/Logout';
+import FencesPage from './components/pages/fences_page/Fences';
+import JourneysPage from './components/pages/journeys_page/Journeys';
+import EventsPage from './components/pages/events_page/Events';
+import UsersPage from './components/pages/users_page/Users';
+import ProfilePage from './components/pages/profile_page/Profile';
+import SupportPage from './components/pages/support_page/Support';
+import LogoutPage from './components/pages/logout_page/Logout';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loadingBarProgress: 10
+      loadingBarProgress: 10,
+      vehicles: {
+        active: [
+          {name: 'Ture', date: '2017-98', ts: '231'},
+          {name: 'Clas', date: '201227-98', ts: '221'}
+        ],
+        disabled: [
+          {name: 'Hans', date: '1982-98', ts: '6969'},
+          {name: 'Greta', date: '2027-98', ts: '420'}
+        ]
+      }
     };
   }
  
@@ -54,16 +64,17 @@ class App extends React.Component {
               <section className="main">
                 <Nav />
                 <section className="content">
+                  <Route path="/location" title="Location"><LocationPage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/trackers" title="Trackers"> <TrackersPage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/fences" title="Fences"><FencesPage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/journeys" title="Journeys"><JourneysPage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/location" title="Location"><LocationPage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/events" title="Events"><EventsPage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/users" title="Users"><UsersPage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/profile" title="Profile"><ProfilePage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/support" title="Support"><SupportPage vehicles={this.state.vehicles} /></Route>
+                  <Route path="/logout" title="Logout"><LogoutPage vehicles={this.state.vehicles} /></Route>
                   <Redirect exact from='/' to='/location'/>
-                  <Route path="/location" component={Location_page} title="Location" />
-                  <Route path="/trackers" component={TrackersPage} title="Trackers" />
-                  <Route path="/fences" component={Fences_page} title="Fences" />
-                  <Route path="/journeys" component={Journeys_page} title="Journeys" />
-                  <Route path="/events" component={Events_page} title="Events" />
-                  <Route path="/users" component={Users_page} title="Users" />
-                  <Route path="/profile" component={Profile_page} title="Profile" />
-                  <Route path="/support" component={Support_page} title="Support" />
-                  <Route path="/logout" component={Logout_page} title="Logout" />
                 </section>
               </section>
             </Route>
