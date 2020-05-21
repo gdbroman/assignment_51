@@ -11,6 +11,7 @@ class Nav extends React.Component {
 
   toggle = () => {
     this.sidemenuElement.current.slide();
+    this.sidemenuElement.current.minimize();
   };
 
   render() {

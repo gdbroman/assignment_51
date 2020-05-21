@@ -17,9 +17,12 @@ section.main {
   padding-top: $nav-height;
 }
 section.content {
-  flex-grow: 1;
   position: relative;
+  flex-grow: 1;
 }
 .lb {
   position: absolute;
+}
+a {
+  user-select: none;
 }
