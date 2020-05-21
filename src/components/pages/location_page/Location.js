@@ -9,10 +9,11 @@ class Location_page extends React.Component {
   }
 
   render() {
+    const tab = <Tab />;
     return (
       <div className="location_page">
-          <Map />
-          <Tab />
+          <Map tab={tab} />
+          {tab}
       </div>
     );
   }
