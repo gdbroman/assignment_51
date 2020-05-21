@@ -1,5 +1,6 @@
 import React from 'react';
 import './Tab.scss';
+import Vehicle from  '../../../vehicle/Vehicle';
 
 class Tab_page extends React.Component {
   componentDidMount() {
@@ -10,8 +11,12 @@ class Tab_page extends React.Component {
     return (
       <footer className="tab">
           <div className="prevnext">
-            <p>Prev</p>
-            <p className="next">Next</p>
+            <p className="pn prev">Prev</p>
+            <p className="position">1/1</p>
+            <p className="pn next">Next</p>
+          </div>
+          <div className="vehicle-container">
+            <Vehicle />
           </div>
       </footer>
     );

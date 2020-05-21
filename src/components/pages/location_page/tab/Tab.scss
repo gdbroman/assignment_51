@@ -1,10 +1,12 @@
 @import '../../../../assets/styles/_colors.scss';
 
 footer.tab {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     bottom:0;
     width: 100%;
-    height: 200px;
+    max-height: 250px;
     background-color: #fff;
     border-left: 1px solid $grey;
 }
@@ -14,7 +16,7 @@ footer.tab {
     height: 50px;
     padding: 9px 20px;
     border-bottom: 1px solid $grey;
-    text-align: left;
+    text-align: center;
 }
 .prevnext p {
     display: inline-block;
@@ -23,16 +25,24 @@ footer.tab {
     color:#606060;
     text-transform: uppercase;
     padding: 0 12px;
+}
+.prevnext p.pn {
     cursor:pointer;
     border-radius: 2px;
     user-select: none;
 }
+.prevnext p.prev {
+    float:left;
+}
 .prevnext p.next {
     float: right;
 }
-.prevnext p:hover {
+.prevnext p.pn:hover {
     background-color:#f2f2f2;
 }
-.prevnext p:active {
+.prevnext p.pn:active {
     background-color: #e5e5e5;
+}
+.vehicle-container {
+    background-color: #eee;
 }
