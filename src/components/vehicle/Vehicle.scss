@@ -1,0 +1,34 @@
+$height: 50px;
+
+.vehicle {
+    position: relative;
+    display: flex;
+    margin: 20px auto;
+    height: $height;
+    vertical-align: middle;
+}
+.vehicle .material-icons {
+    display: inline-block;
+    width: $height;
+    height: $height;
+    line-height: $height;
+    font-size: 28px;
+    color:#606060;
+}
+.vehicle .text {
+    display: inline-block;
+    flex-grow: 1;
+    height: $height;
+    max-width: 100%;
+    padding-left: 10px;
+    line-height: 20px;
+    text-align: left;
+}
+.vehicle .text .name {
+    color:#0d0d0d;
+    font-size: 17px;
+    margin-top:8px;
+}
+.vehicle .text .date {
+    font-size: 15px;
+}
