@@ -10,11 +10,16 @@ footer.tab {
     background-color: #fff;
     border-left: 1px solid $border-color;
     border-bottom: 1px solid $border-color;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
 }
 footer.tab.up {
-    height: auto;
+    height: 50%;
+}
+@media screen and (max-width:500px) {
+    footer.tab.up {
+        height: 100%;
+    }
 }
 
 .prevnext {

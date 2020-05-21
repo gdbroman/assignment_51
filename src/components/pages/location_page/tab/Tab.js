@@ -24,8 +24,10 @@ class Tab_page extends React.Component {
             <p className="position">1/1</p>
             <p className="pn next">Next</p>
           </div>
-          <div className="vehicle-container" onClick={this.toggle}>
-            <Vehicle />
+          <div className="vehicle-container">
+            <div onClick={this.toggle}>
+              <Vehicle />
+            </div>
             <div className="buttons">
               <Button text="Request Location" />
               <Button text="Share Location" />
