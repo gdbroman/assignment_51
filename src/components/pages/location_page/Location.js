@@ -12,7 +12,7 @@ class LocationPage extends React.Component {
     return (
       <div className="location_page">
           <Map />
-          <Tab vehicles={this.props.vehicles}/>
+          <Tab vehicles={this.props.vehicles} />
       </div>
     );
   }

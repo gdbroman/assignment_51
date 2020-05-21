@@ -68,7 +68,6 @@ class App extends React.Component {
                   <Route path="/trackers" title="Trackers"> <TrackersPage vehicles={this.state.vehicles} /></Route>
                   <Route path="/fences" title="Fences"><FencesPage vehicles={this.state.vehicles} /></Route>
                   <Route path="/journeys" title="Journeys"><JourneysPage vehicles={this.state.vehicles} /></Route>
-                  <Route path="/location" title="Location"><LocationPage vehicles={this.state.vehicles} /></Route>
                   <Route path="/events" title="Events"><EventsPage vehicles={this.state.vehicles} /></Route>
                   <Route path="/users" title="Users"><UsersPage vehicles={this.state.vehicles} /></Route>
                   <Route path="/profile" title="Profile"><ProfilePage vehicles={this.state.vehicles} /></Route>

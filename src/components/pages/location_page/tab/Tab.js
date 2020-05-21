@@ -16,6 +16,10 @@ class Tab_page extends React.Component {
     this.setState({ up: !currentState });
   };
 
+  down = () => {
+    this.setState({ up: false });
+  }
+
   render() {
     return (
       <footer className={this.state.up ? "tab up": "tab"}>
@@ -39,7 +43,6 @@ class Tab_page extends React.Component {
           <div className="li">
             <p>Settings</p>
           </div>
-          <div className="outide"></div>
       </footer>
     );
   }
