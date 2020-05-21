@@ -1,6 +1,7 @@
 import React from 'react';
 import './Location.scss';
 import Tab from './tab/Tab';
+import Map from './map/Map';
 
 class Location_page extends React.Component {
   componentDidMount() {
@@ -10,7 +11,7 @@ class Location_page extends React.Component {
   render() {
     return (
       <div className="location_page">
-          <h1>Location page</h1>
+          <Map />
           <Tab />
       </div>
     );
