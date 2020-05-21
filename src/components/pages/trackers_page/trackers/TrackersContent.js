@@ -1,13 +1,14 @@
 import React from 'react';
 
 import './TrackersContent.scss'
+import StatusButton from '../status_button/StatusButton' 
 
 
 class TrackersContent extends React.Component {
   render() { 
     return (  
       <div>
-        <p>teeeeeeeeeeeeeeeeeeeeeeeeeee</p>
+        <StatusButton device_status={this.props.device_status} />
       </div>
     );
   }

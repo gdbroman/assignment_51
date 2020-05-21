@@ -6,7 +6,7 @@ import LoadingBar from 'react-top-loading-bar';
 import Login from './components/pages/login_page/LoginScreen';
 //Pages
 import Location_page from './components/pages/location_page/Location';
-import TrackersPage from './components/pages/trackers_page/Trackers';
+import TrackersPage from './components/pages/trackers_page/TrackersPage';
 import Fences_page from './components/pages/fences_page/Fences';
 import Journeys_page from './components/pages/journeys_page/Journeys';
 import Events_page from './components/pages/events_page/Events';
