@@ -10,7 +10,7 @@ import './StatusButton.scss'
 class StatusButton extends React.Component {
   render() { 
     return ( 
-    <Link className="device-status-button" to={"/trackers/" + this.props.device_status}>{this.props.device_status}}</Link>
+    <Link className="device-status-button" to={"/trackers/" + this.props.device_status}>{this.props.device_status}</Link>
     );
   }
 }

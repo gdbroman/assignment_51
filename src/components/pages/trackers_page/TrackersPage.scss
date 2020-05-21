@@ -2,17 +2,3 @@
 @import '../../../assets/styles/margins';
 
 $min-height: calc(100% - #{$content-margin-top*2});
-
-.tracker-container {
-    border-radius: 2px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    background-color: white;
-    width:90%;
-    max-width:1000px;
-    min-width:300px;
-    min-height: $min-height;
-    margin-top: 50px;
-}
