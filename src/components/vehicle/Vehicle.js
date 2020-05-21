@@ -45,7 +45,7 @@ class Tab_page extends React.Component {
                 <span className="material-icons">{this.getSymbol()}</span>
                 <div className="text">
                     <p className="name">{this.props.info.name}</p>
-                    <p className="date">{this.props.info.date}</p>
+                    <p className="date">{this.props.additional_text?this.props.info.id:this.props.info.date}</p>
                 </div>
             </div>
         );
