@@ -1,6 +1,7 @@
 import React from 'react';
 import './Tab.scss';
 import Vehicle from  '../../../vehicle/Vehicle';
+import VehicleSettings from  '../../../vehicle_settings/VehicleSettings';
 import Button from  '../../../button/Button';
 
 class Tab_page extends React.Component {
@@ -8,6 +9,7 @@ class Tab_page extends React.Component {
     super(props);
     this.state = {
         up: false,
+        showSettings: true,
     }
   }
 
@@ -19,8 +21,17 @@ class Tab_page extends React.Component {
   down = () => {
     this.setState({ up: false });
   }
+  
+  showSettings = () => {
+    this.setState({showSettings: true});
+  }
 
   render() {
+    let vs;
+    if (this.state.showSettings) {
+      vs = <VehicleSettings />;
+    }
+
     return (
       <footer className={this.state.up ? "tab up": "tab"}>
           <div className="prevnext">
@@ -39,10 +50,11 @@ class Tab_page extends React.Component {
           </div>
           <div className="li">
             <p>Location History</p>
-          </div>
-          <div className="li">
+          </div>          
+          <div className="li" onClick={this.showSettings}>
             <p>Settings</p>
           </div>
+          {vs}
       </footer>
     );
   }
