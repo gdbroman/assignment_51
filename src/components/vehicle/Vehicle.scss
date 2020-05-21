@@ -4,8 +4,13 @@ $height: 50px;
     position: relative;
     display: flex;
     margin: 20px auto;
+    padding: 0 20px;
     height: $height;
     vertical-align: middle;
+    cursor: pointer;
+}
+.vehicle:hover {
+    background-color: #eee;
 }
 .vehicle .material-icons {
     display: inline-block;

@@ -11,6 +11,10 @@ class Tab_page extends React.Component {
         }
     }
 
+    openSettings() {
+        
+    }
+
     getSymbol() {
         const type = this.state.type;
         if (type === "boat") {
