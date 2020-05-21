@@ -6,15 +6,17 @@ import './TrackersContent.scss'
 
 
 class TrackersContent extends React.Component {
+  getVehicles(){
+    return this.props.state.vehicles.map((v) => {
+      return <Vehicle metadata={v} />
+    })
+  }
   render() { 
     return (  
       <React.Fragment>  
-        <div className="status-button-container">
-          <StatusButton status_link="active" status_title="Active" />
-          <StatusButton status_link="disabled" status_title="Disabled" />
-        </div>
+
         <div className="trackers-vehicle-container">
-          <Vehicle />
+          {this.getVehicles()}
         </div>
      </React.Fragment>
       

@@ -16,3 +16,12 @@ $min-height: calc(100% - #{$content-margin-top*2});
     min-height: $min-height;
     margin-top: $content-margin-top;
 }
+
+@media screen and (max-width:$break-point) {
+    .content-container {
+        margin:0;
+        width:100%;
+        min-height:100vh;
+    }
+
+}
