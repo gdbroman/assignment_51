@@ -29,7 +29,7 @@ class Side extends React.Component {
                     <NavLink to ="/location" exact={true} activeClassName='active'>
                         <li onClick={this.slide}><i className="material-icons">map</i><p>Location</p></li>
                     </NavLink>
-                    <NavLink to ="/trackers">
+                    <NavLink to ="/trackers/active">
                         <li onClick={this.slide}><i className="material-icons">list</i><p>Possio Trackers</p></li>
                     </NavLink>
                     <NavLink to ="/fences">

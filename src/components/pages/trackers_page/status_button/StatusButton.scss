@@ -4,7 +4,7 @@
     flex: 1;
     display:flex;
     background-color: $red;
-    color:white;
+    color:darken(white, 20%);
     font-size:18px;
     justify-content: center;
     align-items: center;
@@ -15,5 +15,6 @@
 }
 
 .status-button-active {
-    background-color: lighten($red, 3%);
+    color:white;
+    border-bottom-color:white;
 }
