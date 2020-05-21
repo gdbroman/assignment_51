@@ -1,0 +1,29 @@
+@import '../../assets/styles/colors';
+
+.vs {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+.vs .title {
+    height: 50px;
+    border-bottom: 1px solid $border-color;
+    text-align: left;
+}
+.vs .title span {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 20px;
+}
+.vs .title h1 {
+    display: inline-block;
+    vertical-align: top;
+    color:#0d0d0d;
+    line-height: 50px;
+    font-size: 24px;
+}
