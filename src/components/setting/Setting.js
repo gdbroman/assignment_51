@@ -6,6 +6,9 @@ class Tab_page extends React.Component {
     return (
         <div className="li" onClick={this.props.customClickEvent}>
             <p>{this.props.title}</p>
+            <span class="material-icons">
+            keyboard_arrow_right
+            </span>
         </div>
     );
   }

@@ -1,13 +1,21 @@
 @import '../../assets/styles/_colors.scss';
 
-.tab .li {
+.li {
     text-align: left;
     height: 50px;
     padding: 0 20px;
-    line-height: 50px;
     border-bottom: 1px solid $border-color;
     cursor: pointer;
 }
-.tab .li:hover {
+.li:hover {
     background-color: #eee;
+}
+.li p, .li span.material-icons {
+    display: inline-block;
+    line-height: 50px;
+    vertical-align: top;
+}
+.li span.material-icons {
+    float: right;
+    color:#aaa;
 }

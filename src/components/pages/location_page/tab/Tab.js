@@ -3,7 +3,7 @@ import './Tab.scss';
 import Vehicle from  '../../../vehicle/Vehicle';
 import VehicleSettings from  '../../../vehicle_settings/VehicleSettings';
 import Button from  '../../../button/Button';
-import Setting from '../../../setting/Setting'
+import Setting from '../../../setting/Setting';
 
 class Tab_page extends React.Component {
   constructor(props) {
