@@ -3,6 +3,7 @@ import './Tab.scss';
 import Vehicle from  '../../../vehicle/Vehicle';
 import VehicleSettings from  '../../../vehicle_settings/VehicleSettings';
 import Button from  '../../../button/Button';
+import Setting from '../../../setting/Setting'
 
 class Tab_page extends React.Component {
   constructor(props) {
@@ -47,14 +48,10 @@ class Tab_page extends React.Component {
               <Button text="Share Location" />
             </div>
           </div>
-          <div className="li">
-            <p>Location History</p>
-          </div>          
-          <div className="li" onClick={this.showSettings}>
-            <p>Settings</p>
-          </div>
+          <Setting title="Location History" />          
+          <Setting title="Settings" customClickEvent={this.showSettings} />
           <section className={this.state.show_settings ? "settings show": "settings"}>
-            <VehicleSettings func={this.hideSettings} />
+            <VehicleSettings info={this.props.vehicles.active[0]} func={this.hideSettings} />
           </section>
       </footer>
     );

@@ -7,7 +7,7 @@ footer.tab {
     height: 140px;
     background-color: #fff;
     border-left: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
     z-index:2;
@@ -58,18 +58,6 @@ footer.tab.up {
 }
 .tab .vehicle-container .vehicle p.date {
     font-size: 14px;
-}
-
-.tab .li {
-    text-align: left;
-    height: 50px;
-    padding: 0 20px;
-    line-height: 50px;
-    border-bottom: 1px solid $border-color;
-    cursor: pointer;
-}
-.tab .li:hover {
-    background-color: #eee;
 }
 .tab .buttons {
     border-top: 1px solid #e5e5e5;
