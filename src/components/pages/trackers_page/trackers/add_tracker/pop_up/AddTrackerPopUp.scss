@@ -8,8 +8,9 @@
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
+    border-radius: 2px;
+    overflow: hidden;
     bottom:5%;
-    display:relative;
     z-index:10;
     background-color: white;
     padding: 0 60px;
@@ -17,6 +18,7 @@
 
 .add-serial-container {
     display:flex;
+    position:relative;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -48,4 +50,17 @@
     position: absolute;
     bottom:0;
     left:0;
+}
+
+.serial-number-next-button:hover {
+    cursor: pointer;
+    background-color: darken($red, 5%);
+}
+
+.serial-back-arrow {
+    position: absolute;
+    top:30px;
+    left:30px;
+    font-size:25px;
+    color:rgba(0,0,0,0.7);
 }

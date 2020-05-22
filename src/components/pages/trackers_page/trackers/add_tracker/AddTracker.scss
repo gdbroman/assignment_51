@@ -14,8 +14,9 @@
 }
 
 .add-tracker-button:hover {
+    cursor: pointer;
     background-color: darken(#1e88e5, 5%);
-    
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .add-tracker-icon {
