@@ -22,12 +22,12 @@ class App extends React.Component {
       loadingBarProgress: 10,
       vehicles: {
         active: [
-          {name: 'Ture', date: '2017-98', clock: '231', status:"Active", share_text:"Shared", id:"S/N: 00000096969696969699"},
-          {name: 'Clas', date: '201227-98', clock: '221', status:"Active", share_text:"Shared", id:"S/N: 1111111111111111312312"}
+          {name: 'Ture', date: '2017-98', clock: '231', status:"Active", share_text:"Shared", id:"S/N: 00000096969696969699", available_sms: 10, tracker_battery: 4.1, vehicle_battery: 25.53, total_distance: 477.69},
+          {name: 'Clas', date: '201227-98', clock: '221', status:"Active", share_text:"Shared", id:"S/N: 1111111111111111312312", available_sms: 10, tracker_battery: 4.1, vehicle_battery: 25.53, total_distance: 477.69}
         ],
         disabled: [
-          {name: 'Hans', date: '1982-98', clock: '6969', status:"Disabled", share_text:"Shared", id:"S/N: 4124234"},
-          {name: 'Greta', date: '2027-98', clock: '420', status:"Disabled", share_text:"Shared", id:"S/N: 9865875412312"}
+          {name: 'Hans', date: '1982-98', clock: '6969', status:"Disabled", share_text:"Shared", id:"S/N: 4124234", available_sms: 10, tracker_battery: 4.1, vehicle_battery: 25.53, total_distance: 477.69},
+          {name: 'Greta', date: '2027-98', clock: '420', status:"Disabled", share_text:"Shared", id:"S/N: 9865875412312", available_sms: 10, tracker_battery: 4.1, vehicle_battery: 25.53, total_distance: 477.69}
         ]
       }
     };
