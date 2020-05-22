@@ -50,8 +50,14 @@ footer.tab.up {
 .prevnext p.pn:active {
     background-color: #e5e5e5;
 }
-.vehicle-container {
+.tab .vehicle-container {
     background-color: #f5f5f5;
+}
+.tab .vehicle-container .vehicle p.name {
+    font-size: 16px;
+}
+.tab .vehicle-container .vehicle p.date {
+    font-size: 14px;
 }
 
 .tab .li {
