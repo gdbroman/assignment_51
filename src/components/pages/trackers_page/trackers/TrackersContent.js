@@ -1,8 +1,6 @@
 import React from 'react'; 
-import Vehicle from '../../../../components/vehicle/Vehicle'
-
-import './TrackersContent.scss'
-
+import Vehicle from '../../../../components/vehicle/Vehicle';
+import './TrackersContent.scss';
 
 class TrackersContent extends React.Component {
   getVehicles(){
@@ -14,15 +12,14 @@ class TrackersContent extends React.Component {
       )
     })
   }
+
   render() { 
     return (  
-      <React.Fragment>  
-
+      <React.Fragment>
         <div className="trackers-vehicle-container">
           {this.getVehicles()}
         </div>
-     </React.Fragment>
-      
+      </React.Fragment>
     );
   }
 }
