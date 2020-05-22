@@ -9,7 +9,6 @@ class AddTracker extends React.Component {
         this.state = {
             is_overlay: false
         }
-
     }
     deactivateOverlay = () => {
         this.setState({ is_overlay:false })
