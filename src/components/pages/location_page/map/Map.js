@@ -22,6 +22,7 @@ class MapContainer extends React.Component {
            lat: store.latitude,
            lng: store.longitude
          }}
+         text="My marker"
          onClick={() => console.log("You clicked me!")} />
         })
     }
