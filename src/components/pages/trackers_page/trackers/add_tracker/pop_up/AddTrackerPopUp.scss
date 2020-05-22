@@ -2,9 +2,10 @@
 
 .add-tracker-pop-up-container {
     position: absolute;
-    width: 80%;
+    width: 90%;
     max-width: 400px;
-    height: 50%;
+    height: 60%;
+    max-height: 500px;
     left:50%;
     top:50%;
     transform: translate(-50%, -50%);
@@ -63,4 +64,10 @@
     left:30px;
     font-size:25px;
     color:rgba(0,0,0,0.7);
+}
+
+@media screen and (max-width: 768px) {
+
+
+
 }
