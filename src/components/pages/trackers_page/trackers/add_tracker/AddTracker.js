@@ -20,7 +20,7 @@ class AddTracker extends React.Component {
         return (
             <React.Fragment>    
                 <div to="/tracker/add-tracker" className="add-tracker-button" onClick={this.activateOverlay}>
-                    <i className="material-icons add-tracker-icon">exposure_plus_1</i>
+                    <i className="add-tracker-icon">+</i>
                 </div>
                 <Overlay active={this.state.is_overlay} toggle={this.deactivateOverlay} />
                 {this.state.is_overlay && <AddTrackerPopUp />}

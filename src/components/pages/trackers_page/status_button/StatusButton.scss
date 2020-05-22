@@ -12,9 +12,14 @@
     border-bottom-color:rgba($color: #000000, $alpha: 0.15);
     border-bottom-width:4px;
     border-collapse: collapse;
+
 }
 
 .status-button-active {
     color:white;
     border-bottom-color:white;
+}
+  
+.device-status-button:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
