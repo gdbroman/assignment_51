@@ -4,3 +4,8 @@
     height:100%;
     width: 100%;
 }
+.location_page > div:first-of-type {
+    position: relative;
+    flex-grow: 1;
+    margin-bottom: 140px;
+}

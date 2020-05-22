@@ -1,7 +1,7 @@
 import React from 'react';
 import './Location.scss';
 import Tab from './tab/Tab';
-import Map from './map/Map';
+import MapContainer from './map/Map';
 
 class LocationPage extends React.Component {
   componentDidMount() {
@@ -11,7 +11,7 @@ class LocationPage extends React.Component {
   render() {
     return (
       <div className="location_page">
-          <Map />
+          <MapContainer />
           <Tab vehicles={this.props.vehicles} />
       </div>
     );
