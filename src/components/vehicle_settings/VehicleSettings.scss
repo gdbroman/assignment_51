@@ -10,28 +10,6 @@
     width: 100%;
     background-color: #fff;
 }
-.vs .title {
-    height: 50px;
-    border-bottom: 1px solid $border-color;
-    text-align: left;
-}
-.vs .title .icon {
-    display: inline-block;
-    width: 50px;
-    text-align: center;
-    margin: 0 5px;
-    cursor: pointer;
-}
-.vs .title .icon span {
-    line-height: 50px;
-}
-.vs .title h1 {
-    display: inline-block;
-    vertical-align: top;
-    color:#0d0d0d;
-    line-height: 50px;
-    font-size: 24px;
-}
 .vs .vehicle:hover {
     cursor: auto;
     background-color: #fff;
@@ -39,6 +17,9 @@
 .vs .additional-info {
     padding: 20px;
     text-align: left;
+}
+.vs .additional-info p {
+    margin-bottom: 12px;
 }
 .vs .additional-info .info {
     margin: 10px 0;
