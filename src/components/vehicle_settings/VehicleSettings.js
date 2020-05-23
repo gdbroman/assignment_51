@@ -4,6 +4,8 @@ import Vehicle from '../../components/vehicle/Vehicle';
 import Setting from '../setting/Setting';
 import { Route, NavLink, } from 'react-router-dom';
 import TitleNav from '../title_nav/TitleNav';
+import Alerts from './alerts/Alerts';
+
 
 class VehicleSettings extends React.Component {
     render() {
@@ -44,6 +46,7 @@ class VehicleSettings extends React.Component {
                 </Route>
                 <Route path="/location/settings/alerts"> 
                     <TitleNav title="Settings / Alerts" backlink="/location/settings" />
+                    <Alerts />
                 </Route>
                 <Route path="/location/settings/fences">  
                     <TitleNav title="Settings / Geo-fences" backlink="/location/settings" />
