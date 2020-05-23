@@ -75,11 +75,8 @@ footer.tab.up {
 }
 
 @media screen and (max-width:500px) {
-    footer.tab {
-        height: 120px;
-    }
     footer.tab.up {
-        height: 352px;
+        height: 100%;
     }
     .tab .buttons {
         padding: 20px 0 10px 0;

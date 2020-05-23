@@ -35,5 +35,10 @@ nav.header .hamburger i {
 nav.header img.logo {
     display: inline-block;
     height: 50px;
-    margin-left:20px;
+    margin-left:12px;
+}
+@media screen and (max-width:500px) {
+    nav.header img.logo {
+        margin-left: 0;
+    }
 }

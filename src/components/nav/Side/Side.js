@@ -6,7 +6,7 @@ class Side extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            active: true,
+            active: false,
             small: true,
         };
     }

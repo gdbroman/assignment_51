@@ -4,13 +4,13 @@ import Vehicle from  '../../../vehicle/Vehicle';
 import VehicleSettings from  '../../../vehicle_settings/VehicleSettings';
 import Button from  '../../../button/Button';
 import Setting from '../../../setting/Setting';
+import { Route, Switch, NavLink, } from 'react-router-dom';
 
 class Tab_page extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
         up: false,
-        show_settings: false,
     }
   }
 
@@ -21,14 +21,6 @@ class Tab_page extends React.Component {
 
   down = () => {
     this.setState({ up: false });
-  }
-  
-  showSettings = () => {
-    this.setState({ show_settings: true});
-  }
-
-  hideSettings = () => {
-    this.setState({ show_settings: false});
   }
 
   render() {
@@ -47,12 +39,18 @@ class Tab_page extends React.Component {
               <Button text="Request Location" />
               <Button text="Share Location" />
             </div>
-          </div>
-          <Setting title="Location History" />          
-          <Setting title="Settings" customClickEvent={this.showSettings} />
-          <section className={this.state.show_settings ? "settings show": "settings"}>
+          </div>       
+          <NavLink to='/location/settings' >
+            <Setting title="Settings" />
+          </NavLink>
+          <NavLink to='/location/history'>
+            <Setting title="Location History" />   
+          </NavLink>
+          <Switch>
+            <Route path="/location/settings">
             <VehicleSettings info={this.props.vehicles.active[0]} func={this.hideSettings} />
-          </section>
+            </Route>
+          </Switch>
       </footer>
     );
   }
