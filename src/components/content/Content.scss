@@ -5,7 +5,6 @@ $min-height: calc(100% - #{$content-margin-top*2});
 $max-width: calc(100% - #{$content-margin-top*2});
 
 .content-container {
-    border-radius: 2px;
     overflow: hidden;
     display:flex;
     align-items:center;
