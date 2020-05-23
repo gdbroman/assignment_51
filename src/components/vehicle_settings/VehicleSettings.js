@@ -2,7 +2,7 @@ import React from 'react';
 import './VehicleSettings.scss';
 import Vehicle from '../../components/vehicle/Vehicle';
 import Setting from '../setting/Setting';
-import { Route, Switch, NavLink, } from 'react-router-dom';
+import { Route, NavLink, } from 'react-router-dom';
 import TitleNav from '../title_nav/TitleNav';
 
 class VehicleSettings extends React.Component {
@@ -46,10 +46,10 @@ class VehicleSettings extends React.Component {
                     <TitleNav title="Settings / Alerts" backlink="/location/settings" />
                 </Route>
                 <Route path="/location/settings/fences">  
-                <TitleNav title="Settings / Geo-fences" backlink="/location/settings" />
+                    <TitleNav title="Settings / Geo-fences" backlink="/location/settings" />
                 </Route>
                 <Route path="/location/settings/journal">  
-                <TitleNav title="Settings / Driver's journal" backlink="/location/settings" />
+                    <TitleNav title="Settings / Driver's journal" backlink="/location/settings" />
                 </Route>
             </div>
         );
