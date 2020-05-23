@@ -27,15 +27,27 @@
     height:100%;
 }
 
+$border-color: rgba(0,0,0,0.3);
 .serial-number-input {
     width:90%;
-    cursor: pointer;
+    cursor: text;
     max-width:300px;
+    color: rgba(0,0,0,0.7);
     border-width: 0px;
     border-bottom-width: 1px;
-    border-bottom-color:rgba(0,0,0,0.2);
+    border-bottom-color:$border-color;
     margin-top:100px;
     font-size: 18px;
+    outline: none;
+}
+
+.serial-number-input::placeholder {
+    color:rgba(0,0,0,0.3);
+    font-size:15px;
+}
+
+.serial-number-input:focus {
+    border-bottom-color: lighten($border-color, 55%);
 }
 
 .serial-number-information {
@@ -58,10 +70,11 @@
     background-color: darken($red, 5%);
 }
 
-.serial-back-arrow {
+.serial-back {
     position: absolute;
     top:30px;
     left:30px;
+    cursor: pointer;
     font-size:25px;
     color:rgba(0,0,0,0.7);
 }

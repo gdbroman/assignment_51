@@ -1,0 +1,60 @@
+@import '../../assets/styles/colors';
+
+.vs {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+.vs .title {
+    height: 50px;
+    border-bottom: 1px solid $border-color;
+    text-align: left;
+}
+.vs .title .icon {
+    display: inline-block;
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.vs .title .icon span {
+    line-height: 50px;
+}
+.vs .title h1 {
+    display: inline-block;
+    vertical-align: top;
+    color:#0d0d0d;
+    line-height: 50px;
+    font-size: 24px;
+}
+.vs .vehicle:hover {
+    cursor: auto;
+    background-color: #fff;
+}
+.vs .additional-info {
+    padding: 20px;
+    text-align: left;
+}
+.vs .additional-info p {
+    margin-bottom: 12px;
+}
+.vs .additional-info .info {
+    margin: 10px 0;
+}
+.vs .additional-info .info p {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+.vs .additional-info .info strong {
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 2px;
+    line-height: 20px;
+    height:20px;
+}

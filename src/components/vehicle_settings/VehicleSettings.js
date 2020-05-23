@@ -3,6 +3,7 @@ import './VehicleSettings.scss';
 import Vehicle from '../../components/vehicle/Vehicle';
 import Setting from '../setting/Setting';
 import { Route, Switch, NavLink, } from 'react-router-dom';
+import TitleNav from '../title_nav/TitleNav';
 
 class VehicleSettings extends React.Component {
     render() {
@@ -42,28 +43,13 @@ class VehicleSettings extends React.Component {
                     </div>
                 </Route>
                 <Route path="/location/settings/alerts"> 
-                    <div className="title">
-                        <NavLink to='/location/settings' >
-                            <div className="icon"><span className="material-icons">arrow_back</span></div>
-                        </NavLink>
-                        <h1>Settings / Alerts</h1>
-                    </div>
+                    <TitleNav title="Settings / Alerts" backlink="/location/settings" />
                 </Route>
                 <Route path="/location/settings/fences">  
-                    <div className="title">
-                        <NavLink to='/location/settings' >
-                            <div className="icon"><span className="material-icons">arrow_back</span></div>
-                        </NavLink>
-                        <h1>Settings / Geo-fences</h1>
-                    </div>
+                <TitleNav title="Settings / Geo-fences" backlink="/location/settings" />
                 </Route>
                 <Route path="/location/settings/journal">  
-                    <div className="title">
-                        <NavLink to='/location/settings' >
-                            <div className="icon"><span className="material-icons">arrow_back</span></div>
-                        </NavLink>
-                        <h1>Settings / Driver's journal</h1>
-                    </div>
+                <TitleNav title="Settings / Driver's journal" backlink="/location/settings" />
                 </Route>
             </div>
         );
