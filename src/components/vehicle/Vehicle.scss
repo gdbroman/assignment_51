@@ -1,12 +1,13 @@
 @import '../../assets/styles/colors';
 
 $height: 50px;
-$height-outer:100px;
+$height-outer:80px;
 
 .vehicle {
     position: relative;
     display: block;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
+    margin: 20px 0 0 0;
     height: $height-outer;
     width: 100%;
     vertical-align: middle;

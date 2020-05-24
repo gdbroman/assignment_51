@@ -45,7 +45,6 @@ class VehicleSettings extends React.Component {
                     </div>
                 </Route>
                 <Route path="/location/settings/alerts"> 
-                    <TitleNav title="Settings / Alerts" backlink="/location/settings" />
                     <Alerts />
                 </Route>
                 <Route path="/location/settings/fences">  
