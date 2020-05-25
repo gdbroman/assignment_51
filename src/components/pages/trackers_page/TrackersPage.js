@@ -3,12 +3,10 @@ import TrackersContent from './trackers/TrackersContent'
 import Content from '../../content/Content'
 import StatusButton from '../../status_button/StatusButton'
 import AddTracker from './trackers/add_tracker/AddTracker'
-
 import {
   Route,
   Switch,
 } from 'react-router-dom';
-
 import './TrackersPage.scss'
 
 class TrackerPage extends React.Component {
