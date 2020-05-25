@@ -11,10 +11,9 @@ class ToggleSetting extends React.Component {
   }
 
   toggle = () => {
-    const previous = this.state.on;
-    this.setState({
-      on: !previous,
-    });
+    this.setState(prevState => ({
+      on: !prevState.on,
+    }));
   }
 
   render() {

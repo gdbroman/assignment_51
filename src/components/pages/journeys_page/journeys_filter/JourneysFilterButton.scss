@@ -1,0 +1,29 @@
+@import '../../../../assets/styles/colors';
+
+.journey-filter-icon {
+    font-size:22px;
+    color:white;
+    margin-left:10px;
+}
+
+.journey-filter-container {
+    width:130px;
+    position:absolute;
+    bottom:100px;
+    height:40px;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $red;
+    user-select: none;
+}
+
+.journey-filter-container:hover {
+    background-color: darken($red, 5%)
+}
+
+.journey-filter-text {
+    font-size:15px;
+    color:white;
+}
