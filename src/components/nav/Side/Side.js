@@ -47,9 +47,9 @@ class Side extends React.Component {
                     <NavLink to ="/profile">
                         <li onClick={this.slide}><i className="material-icons">settings</i><p>Profile</p></li>
                     </NavLink>
-                    <NavLink to ="/support">
+                    <a href="https://support.possio.com/hc/sv" rel="noopener noreferrer" target="_blank">
                         <div className="bb"><li onClick={this.slide}><i className="material-icons">public</i><p>Support</p></li></div>
-                    </NavLink>
+                    </a>
                     <NavLink to ="/logout">
                         <li onClick={this.slide}><i className="material-icons">exit_to_app</i><p>Log out</p></li>
                     </NavLink>

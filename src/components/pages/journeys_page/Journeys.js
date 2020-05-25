@@ -66,7 +66,7 @@ class JourneysPage extends React.Component {
       <Content>
           {journeys.map(journey => <Journey journey={journey} />)}
           <JourneysFilterButton toggle={this.toggleFilter}/>
-          <JourneysFilter toggled={this.state.display_filters}/>
+          <JourneysFilter toggled={this.state.display_filters} vehicles={journeys.map(journey => journey.vehicle_name).filter((v, i, s) => s.indexOf(v) === i)}/>
       </Content>
     );
   }

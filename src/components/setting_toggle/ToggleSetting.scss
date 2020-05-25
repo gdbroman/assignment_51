@@ -1,0 +1,29 @@
+@import '../../assets/styles/_colors.scss';
+
+.li.toggle {
+    text-align: left;
+    height: 50px;
+    padding: 0 20px;
+    border-bottom: 1px solid $border-color;
+    cursor: pointer;
+    background-color: #fff !important;
+}
+.li .container {
+    max-width: 500px;
+}
+.first .li {
+    margin-top: 20px;
+}
+.li p, .li span.material-icons {
+    display: inline-block;
+    line-height: 50px;
+    vertical-align: top;
+}
+.li span.material-icons {
+    float: right;
+    color:#aaa;
+    font-size: 38px;
+}
+.li.toggled span.material-icons {
+    color:#1e88e5;
+}

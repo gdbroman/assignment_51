@@ -3,9 +3,9 @@ import './VehicleSettings.scss';
 import Vehicle from '../../components/vehicle/Vehicle';
 import Setting from '../setting/Setting';
 import { Route, NavLink, } from 'react-router-dom';
-import TitleNav from '../title_nav/TitleNav';
 import Alerts from './alerts/Alerts';
-
+import Journal from './journal/Journal';
+import Fences from './fences/Fences';
 
 class VehicleSettings extends React.Component {
     render() {
@@ -45,14 +45,13 @@ class VehicleSettings extends React.Component {
                     </div>
                 </Route>
                 <Route path="/location/settings/alerts"> 
-                    <TitleNav title="Settings / Alerts" backlink="/location/settings" />
-                    <Alerts />
+                    <Alerts info={this.props.info} />
                 </Route>
                 <Route path="/location/settings/fences">  
-                    <TitleNav title="Settings / Geo-fences" backlink="/location/settings" />
+                    <Fences info={this.props.info} />
                 </Route>
                 <Route path="/location/settings/journal">  
-                    <TitleNav title="Settings / Driver's journal" backlink="/location/settings" />
+                    <Journal info={this.props.info} />
                 </Route>
             </div>
         );

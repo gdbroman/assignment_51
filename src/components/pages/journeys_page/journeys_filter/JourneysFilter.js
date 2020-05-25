@@ -1,23 +1,17 @@
 import React from 'react';
+import ToggleSetting from '../../../setting_toggle/ToggleSetting'
 import './JourneysFilter.scss';
 
-const filters = [
-    'text',
-    'amount'
-]
 
 const Filter = ({filter}) => (
-    <div className="filter-container">
-        <p className="filter-name">{filter}</p>
-    
-    </div>
+    <ToggleSetting title={filter} customClickEvent={()=>{}}/>
 );
 
 
-const JourneysFilter = ({toggled}) => (
+const JourneysFilter = ({toggled, vehicles}) => (
     <div className={toggled ? "filter-tab-container" : "filter-tab-container filter-tab-show"}>
         <p className="filter-title">Filters</p>
-        {filters.map(filter => <Filter filter={filter}/>)}
+        {vehicles.map(vehicle => <Filter filter={vehicle}/>)}
     </div>
 
 );
