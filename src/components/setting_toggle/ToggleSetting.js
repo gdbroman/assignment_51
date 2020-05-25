@@ -19,11 +19,13 @@ class ToggleSetting extends React.Component {
 
   render() {
     return (
-        <div className={this.state.on ? "li toggled" : "li"} onClick={this.props.customClickEvent}>
+        <div className={this.state.on ? "li toggle toggled" : "li toggle"} onClick={this.props.customClickEvent}>
+          <div className="container">
             <p>{this.props.title}</p>
             <span class="material-icons" onClick={this.toggle}>
             {this.state.on ? "toggle_on" : "toggle_off"}
             </span>
+          </div>
         </div>
     );
   }
