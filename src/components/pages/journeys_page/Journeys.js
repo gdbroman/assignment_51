@@ -1,7 +1,9 @@
 import React from 'react';
 import Journey from './journey/Journey'
 import './Journeys.scss';
-
+import JourneysFilterButton from './journeys_filter/JourneysFilterButton';
+import JourneysFilter from './journeys_filter/JourneysFilter'
+import Content from '../../content/Content'
 
 const journeys = [{
   short_from:'Stad 1', 
@@ -42,15 +44,30 @@ const journeys = [{
 }]
 
 class JourneysPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display_filters: false
+    }
+  }
+
+  toggleFilter = () => {
+    this.setState((prevState) => ({
+      display_filters: !prevState.display_filters
+    }))
+  }
+
   componentDidMount() {
     document.title = 'Journeys | Possio Alarm';
   }
 
   render() {
     return (
-      <div className="">
+      <Content>
           {journeys.map(journey => <Journey journey={journey} />)}
-      </div>
+          <JourneysFilterButton toggle={this.toggleFilter}/>
+          <JourneysFilter toggled={this.state.display_filters}/>
+      </Content>
     );
   }
 }
