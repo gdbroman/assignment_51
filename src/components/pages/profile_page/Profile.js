@@ -3,6 +3,7 @@ import './Profile.scss';
 import Setting from '../../setting/Setting';
 import Pay from './payment/Stripe';
 import TitleNav from '../../title_nav/TitleNav';
+import StatusButton from '../../status_button/StatusButton'
 import { Route, NavLink, } from 'react-router-dom';
 
 class ProfilePage extends React.Component {
@@ -68,15 +69,24 @@ class ProfilePage extends React.Component {
                 <p>Payment method</p>
                 <Pay />
               </div>
-              <NavLink to="/profile/transaction-history">
+              <NavLink to="/profile/transaction-history/success">
                 <Setting title="Transaction history" />
               </NavLink>
             </div>
           </Route> 
           <Route path="/profile/transaction-history">
             <TitleNav title="Transaction history" backlink="/profile" />
+            <div className="status-button-container">
+              <StatusButton status_link="/profile/transaction-history/success" status_title="Active" />
+              <StatusButton status_link="/profile/transaction-history/failed" status_title="Disabled" />
+            </div>
             <div className="p">
+              <Route path="/profile/transaction-history/success"> 
               {this.transactions()}
+              </Route>
+              <Route path="/profile/transaction-history/failed">
+              {this.transactions()}
+              </Route>
             </div>
           </Route> 
         </div>

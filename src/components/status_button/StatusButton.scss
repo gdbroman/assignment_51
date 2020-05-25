@@ -1,8 +1,15 @@
-@import '../../../../assets/styles/colors';
+@import '../../assets/styles/colors';
 
-.device-status-button {
-    flex: 1;
+.status-button-container {
     display:flex;
+    justify-content: space-evenly;
+    width:100%;
+    height:6vh;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+.device-status-button {
+    display:flex;
+    flex-grow: 1;
     background-color: $red;
     color:darken(white, 20%);
     font-size:18px;
@@ -15,7 +22,6 @@
     user-select: none;
 
 }
-
 .status-button-active {
     color:white;
     border-bottom-color:white;

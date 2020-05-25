@@ -1,7 +1,7 @@
 import React from 'react';
 import TrackersContent from './trackers/TrackersContent'
 import Content from '../../content/Content'
-import StatusButton from './status_button/StatusButton'
+import StatusButton from '../../status_button/StatusButton'
 import AddTracker from './trackers/add_tracker/AddTracker'
 
 import {
@@ -17,8 +17,8 @@ class TrackerPage extends React.Component {
     return ( 
         <Content>
           <div className="status-button-container">
-            <StatusButton status_link="active" status_title="Active" />
-            <StatusButton status_link="disabled" status_title="Disabled" />
+            <StatusButton status_link="/trackers/active" status_title="Active" />
+            <StatusButton status_link="/trackers/disabled" status_title="Disabled" />
           </div>
           <Switch>
             <Route path="/trackers/active"> <TrackersContent vehicles={this.props.vehicles.active} /> </Route>
