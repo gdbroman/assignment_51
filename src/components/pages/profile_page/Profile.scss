@@ -1,0 +1,54 @@
+@import './../../../assets/styles/colors';
+
+.profile .card {
+    max-width: 500px;
+    min-height: 500px;
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid $border-color;
+    margin: 30px auto;
+}
+.profile .card .p {
+    padding:30px;
+}
+.profile .card .s {
+    margin-bottom:20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    text-align: left;
+}
+.profile .card .s p {
+    line-height: 20px;
+    display: inline-block;
+    color:#333;
+}
+.profile .card .li {
+    padding: 0;
+}
+.profile .card .s .radios {
+    display: inline-block;
+    float:right;
+}
+.profile .card .s .radios p {
+    margin-left: 5px;
+}
+.profile .card .s .radios label {
+    margin-left: 20px;
+}
+.profile .card .s strong {
+    display: inline-block;
+    float: right;
+    color:#666;
+    font-weight: 500;
+}
+.profile .card .s .radios p strong {
+    float:none;
+}
+@media screen and (max-width:500px) {
+    .profile .card .p {
+        padding:30px 20px;
+    }
+    .profile .card {
+        margin: 0px auto;
+    }
+}
