@@ -49,7 +49,7 @@ class ProfilePage extends React.Component {
                 <p>Unit</p>
                 <div onChange={this.setUnit.bind(this)} className="radios">
                   <label>
-                    <input type="radio" name="unit" value={true} /> <p><strong>km</strong></p>
+                    <input type="radio" name="unit" value={true} defaultChecked /> <p><strong>km</strong></p>
                   </label>
                   <label>
                     <input type="radio" name="unit" value={false} /> <p><strong>miles</strong></p>
