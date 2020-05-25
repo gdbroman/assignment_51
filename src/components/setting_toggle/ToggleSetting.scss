@@ -22,8 +22,15 @@
 .li span.material-icons {
     float: right;
     color:#aaa;
+    width:40px;
     font-size: 38px;
 }
 .li.toggled span.material-icons {
     color:#1e88e5;
+}
+.li.toggle p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width:80%;
+    white-space: nowrap;
 }

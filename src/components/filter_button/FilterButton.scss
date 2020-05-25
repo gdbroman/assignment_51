@@ -1,12 +1,12 @@
-@import '../../../../assets/styles/colors';
+@import '../../assets/styles/colors';
 
-.journey-filter-icon {
+.filter-icon {
     font-size:22px;
     color:white;
     margin-left:10px;
 }
 
-.journey-filter-container {
+.filter-container {
     width:130px;
     position:absolute;
     bottom:100px;
@@ -19,11 +19,11 @@
     user-select: none;
 }
 
-.journey-filter-container:hover {
+.filter-container:hover {
     background-color: darken($red, 5%)
 }
 
-.journey-filter-text {
+.filter-text {
     font-size:15px;
     color:white;
 }

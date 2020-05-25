@@ -1,7 +1,7 @@
 import React from 'react';
 import Journey from './journey/Journey'
 import './Journeys.scss';
-import JourneysFilterButton from './journeys_filter/JourneysFilterButton';
+import JourneysFilterButton from '../../filter_button/FilterButton';
 import JourneysFilter from './journeys_filter/JourneysFilter'
 import Content from '../../content/Content'
 
@@ -39,7 +39,7 @@ const journeys = [{
   detailed_to: 'Stad 2 klippan',
   date_from: '2017',
   date_to: '2018-03',
-  vehicle_name: 'Båte',
+  vehicle_name: 'Båte with a very long name to test for anomalies',
   journey_reason: 'Business',
 }]
 
@@ -66,7 +66,7 @@ class JourneysPage extends React.Component {
       <Content>
           {journeys.map(journey => <Journey journey={journey} />)}
           <JourneysFilterButton toggle={this.toggleFilter}/>
-          <JourneysFilter toggled={this.state.display_filters} vehicles={journeys.map(journey => journey.vehicle_name).filter((v, i, s) => s.indexOf(v) === i)}/>
+          <JourneysFilter toggled={this.state.display_filters} toggleFilter={this.toggleFilter} vehicles={journeys.map(journey => journey.vehicle_name).filter((v, i, s) => s.indexOf(v) === i)}/>
       </Content>
     );
   }
