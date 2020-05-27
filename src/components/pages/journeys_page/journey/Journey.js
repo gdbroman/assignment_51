@@ -1,4 +1,5 @@
 import React from 'react';
+import a_to_b from '../../../../assets/img/a_to_b.png'
 import './Journey.scss';
 
 const Route = ({detailed_address, date}) => (
@@ -10,6 +11,7 @@ const Route = ({detailed_address, date}) => (
 
 
 const Journey = ({journey: {short_from, short_to, detailed_from, detailed_to, date_from, date_to, vehicle_name, journey_reason}}) => (
+    <div className="journey-outer">
         <div className="journey-container">
             <div className="journey-vehicle-info">
                 <div className="journey-icon-container">
@@ -22,10 +24,14 @@ const Journey = ({journey: {short_from, short_to, detailed_from, detailed_to, da
                 </div>
             </div>
             <div className="journey-route-container">
-                <Route detailed_address={detailed_from} date={date_from}/>
-                <Route detailed_address={detailed_to} date={date_to}/>
+                <img src={a_to_b} alt="" className="journey-a-to-b-img"/>
+                <div className="journey-long-route-container">
+                    <Route detailed_address={detailed_from} date={date_from}/>
+                    <Route detailed_address={detailed_to} date={date_to}/>
+                </div>
             </div>
         </div>
-    )
+    </div>
+)
 
 export default Journey;

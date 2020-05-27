@@ -1,45 +1,45 @@
 import React from 'react';
 import Journey from './journey/Journey'
 import './Journeys.scss';
-import JourneysFilterButton from '../../filter_button/FilterButton';
-import JourneysFilter from './journeys_filter/JourneysFilter'
+import FilterButton from '../../filter/FilterButton';
+import FilterSide from '../../filter/FilterSide'
 import Content from '../../content/Content'
 
 const journeys = [{
   short_from:'Stad 1', 
   short_to: 'Stad 2',
-  detailed_from: 'Stad 1 Märket',
-  detailed_to: 'Stad 2 klippan',
+  detailed_from: 'Jönköping 31 Järnvägen',
+  detailed_to: 'Jönköping 32 Järnvägen',
+  date_from: '2017-02',
+  date_to: '2018-03',
+  vehicle_name: 'Life Boat',
+  journey_reason: 'Business',
+},{
+  short_from:'Stad 1', 
+  short_to: 'Stad 2',
+  detailed_from: 'Vaggeryd 31 Ringvägen',
+  detailed_to: 'Vaggeryd 32 Ringvägen',
   date_from: '2017',
   date_to: '2018-03',
-  vehicle_name: 'Burke the boat',
+  vehicle_name: 'Fishing boat',
   journey_reason: 'Business',
 },{
   short_from:'Stad 1', 
   short_to: 'Stad 2',
   detailed_from: 'Stad 1 Märket',
-  detailed_to: 'Stad 2 klippan',
+  detailed_to: 'Ort 11113',
   date_from: '2017',
   date_to: '2018-03',
-  vehicle_name: 'Båt Tor',
+  vehicle_name: 'Another boat',
   journey_reason: 'Business',
 },{
   short_from:'Stad 1', 
   short_to: 'Stad 2',
-  detailed_from: 'Stad 1 Märket',
-  detailed_to: 'Stad 2 klippan',
+  detailed_from: 'Stad 1 Väg 234 Sidospår 7 Genväg 23123 Linje 3',
+  detailed_to: 'Stad 2 Ikea ',
   date_from: '2017',
   date_to: '2018-03',
-  vehicle_name: 'Frej',
-  journey_reason: 'Business',
-},{
-  short_from:'Stad 1', 
-  short_to: 'Stad 2',
-  detailed_from: 'Stad 1 Märket',
-  detailed_to: 'Stad 2 klippan',
-  date_from: '2017',
-  date_to: '2018-03',
-  vehicle_name: 'Båte with a very long name to test for anomalies',
+  vehicle_name: 'Boat with a very long name to test for anomalies',
   journey_reason: 'Business',
 }]
 
@@ -65,8 +65,8 @@ class JourneysPage extends React.Component {
     return (
       <Content>
           {journeys.map(journey => <Journey journey={journey} />)}
-          <JourneysFilterButton toggle={this.toggleFilter}/>
-          <JourneysFilter toggled={this.state.display_filters} toggleFilter={this.toggleFilter} vehicles={journeys.map(journey => journey.vehicle_name).filter((v, i, s) => s.indexOf(v) === i)}/>
+          <FilterButton toggle={this.toggleFilter}/>
+          <FilterSide toggled={this.state.display_filters} toggle={this.toggleFilter} vehicles={journeys.map(journey => journey.vehicle_name).filter((v, i, s) => s.indexOf(v) === i)}/>
       </Content>
     );
   }
