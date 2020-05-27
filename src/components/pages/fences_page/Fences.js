@@ -2,6 +2,7 @@ import React from 'react';
 import Content from '../../content/Content';
 import StatusButton from '../../status_button/StatusButton';
 import FilterButton from '../../filter_button/FilterButton'
+import FenceList from './fences/FenceList'
 
 import {
   Route,
@@ -28,8 +29,12 @@ class FencesPage extends React.Component {
             <StatusButton status_link="/fences/others" status_title="By other users" />
           </div>
           <Switch>
-            <Route path="/fences/me">  </Route>
-            <Route path="/fences/others">  </Route>
+            <Route path="/fences/me">
+              <FenceList fences={[]}/>    
+            </Route>
+            <Route path="/fences/others">
+              <FenceList fences={[]}/>
+            </Route>
           </Switch>
           <FilterButton />
         </Content>          

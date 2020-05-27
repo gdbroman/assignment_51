@@ -1,4 +1,6 @@
 import React from 'react';
+import UserList from './users/UserList'
+import Content from '../../content/Content';
 import './Users.scss';
 
 class UsersPage extends React.Component {
@@ -8,9 +10,9 @@ class UsersPage extends React.Component {
 
   render() {
     return (
-      <div className="location_page">
-          <h1>Users page</h1>
-      </div>
+      <Content>
+          <UserList users={[]}/>
+      </Content>
     );
   }
 }
