@@ -6,18 +6,14 @@ import { Route, NavLink, } from 'react-router-dom';
 import Alerts from './alerts/Alerts';
 import Journal from './journal/Journal';
 import Fences from './fences/Fences';
+import TitleNav from '../title_nav/TitleNav';
 
 class VehicleSettings extends React.Component {
     render() {
         return (
             <div className="vs">
                 <Route exact path="/location/settings"> 
-                    <div className="title">
-                        <NavLink to='/location' >
-                            <div className="icon"><span className="material-icons">arrow_back</span></div>
-                        </NavLink>
-                        <h1>Settings</h1>
-                    </div>
+                    <TitleNav title="Settings" backlink="/location" />
                     <Vehicle info={this.props.info} additional_text={true} />
                     <NavLink to='/location/settings/alerts' >
                         <Setting title="Alerts" />

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Map.scss';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import { Route, Switch, } from 'react-router-dom';
 
 class MapContainer extends React.Component {
     constructor(props) {
@@ -35,14 +36,27 @@ class MapContainer extends React.Component {
 
         return (
             <div className="map-container">
-                <Map
-                    google={this.props.google}
-                    zoom={8}
-                    style={mapStyles}
-                    initialCenter={{ lat: 47.444, lng: -122.176}}
-                    >
-                    {this.displayMarkers()}
-                </Map>
+                <Switch>
+                    <Route exact path="/location/history">
+                        <Map
+                            google={this.props.google}
+                            zoom={18}
+                            style={mapStyles}
+                            center={{ lat: 59.3339486, lng: 18.0705805}}
+                            >
+                        </Map>
+                    </Route>
+                    <Route path="/location">
+                        <Map
+                            google={this.props.google}
+                            zoom={8}
+                            style={mapStyles}
+                            initialCenter={{ lat: 47.444, lng: -122.176}}
+                            >
+                            {this.displayMarkers()}
+                        </Map>
+                    </Route>
+                </Switch>
             </div>
         );
     }
