@@ -1,4 +1,7 @@
 import React from 'react';
+import EmptyPageImage from '../../empty_page_image/EmptyPageImage'
+import Content from '../../content/Content'
+import empty_img from '../../../assets/img/empty_events.png'; 
 import './Events.scss';
 
 class EventsPage extends React.Component {
@@ -8,9 +11,9 @@ class EventsPage extends React.Component {
 
   render() {
     return (
-      <div className="location_page">
-          <h1>Events page</h1>
-      </div>
+      <Content>
+          <EmptyPageImage imgsrc={empty_img} text="No events available" smalltext="You might have filtered out your devices, or have not yet recieved any events."/>
+      </Content>
     );
   }
 }

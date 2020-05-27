@@ -1,0 +1,22 @@
+.empty-page-image-container {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.empty-page-image {
+    width:250px;
+}
+
+.empty-page-text {
+    margin-top: 60px;
+    color: lighten(black, 10%);
+
+}
+
+.empty-page-text-small {
+    color: lighten(black, 20%);
+    font-size:13px;
+    margin-top:25px;   
+}

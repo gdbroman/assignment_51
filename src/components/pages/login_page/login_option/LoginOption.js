@@ -7,9 +7,9 @@ import './LoginOption.scss'
 class LoginOption extends React.Component {
   render() { 
     return (  
-      <div className="login-option">
-        <Link className="login-option-text" to={'/login/' + this.props.link}>{this.props.text}</Link>
-      </div>
+      <Link className="login-option" to={'/login/' + this.props.link}>
+        <p className="login-option-text"> {this.props.text}</p>
+      </Link>
     );
   }
 }
