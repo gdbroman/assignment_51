@@ -1,12 +1,15 @@
 @import './../../../assets/styles/colors';
 
 .profile .card {
+    position: relative;
     max-width: 500px;
     min-height: 500px;
     background-color: #fff;
     border-radius: 2px;
     border: 1px solid $border-color;
     margin: 30px auto;
+    padding-top: 50px;
+    overflow:hidden;
 }
 .profile .card .p {
     padding:30px;

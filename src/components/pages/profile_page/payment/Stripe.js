@@ -7,6 +7,7 @@ class CheckoutForm extends React.Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const {stripe, elements} = this.props;
+    // eslint-disable-next-line no-unused-vars
     const {error, paymentMethod} = await stripe.createPaymentMethod({
       type: 'card',
       card: elements.getElement(CardElement),

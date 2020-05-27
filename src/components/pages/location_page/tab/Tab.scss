@@ -1,9 +1,12 @@
 @import '../../../../assets/styles/_colors.scss';
 
 footer.tab {
-    position: absolute;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     bottom:0;
     width: 100%;
+    min-height: 140px;
     height: 140px;
     background-color: #fff;
     border-left: 1px solid $border-color;
@@ -12,14 +15,24 @@ footer.tab {
     overflow: hidden;
     z-index:2;
 }
+footer.tab .m {
+    padding-top: 50px;
+    height:100%;
+}
 footer.tab * {
     user-select: none;
 }
 footer.tab.up {
+    height: auto;
     height: 50%;
     overflow-y: auto;
 }
+footer.tab.up.half {
+    height: 50% !important;
+}
 .prevnext {
+    position: absolute;
+    top:0;
     width: 100%;
     height: 50px;
     padding: 9px 20px;

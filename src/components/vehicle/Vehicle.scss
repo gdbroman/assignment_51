@@ -44,6 +44,12 @@ $height-outer:100px;
 .vehicle .text .date {
     font-size: 11px;
 }
+.vehicle .text .material-icons {
+    position: absolute;
+    right:20px;
+    top:20px;
+    color:#aaa;
+}
 
 .vehicle-additional-text-container {
     font-size:12px;
@@ -53,8 +59,8 @@ $height-outer:100px;
     display:inline;
 }
 
-.vehicle-additional-text + .vehicle-additional-text {
-    margin-left:15px;
+.vehicle-additional-text {
+    margin-left:6px;
 }
 
 .green {

@@ -38,6 +38,18 @@ class Tab_page extends React.Component {
             </div>
         )
     }   
+
+    getArrow() {
+        if (this.props.arrow) {
+            if (this.props.up) {
+                return <span className="material-icons">keyboard_arrow_down</span>;
+            }
+            else {
+                return <span className="material-icons">keyboard_arrow_up</span>;
+            }
+        }
+    }
+
     render() {
         return (
             <div className="vehicle">
@@ -46,6 +58,7 @@ class Tab_page extends React.Component {
                 <div className="text">
                     <p className="name">{this.props.info.name}</p>
                     <p className="date">{this.props.additional_text?this.props.info.id:this.props.info.date}</p>
+                    {this.getArrow()}
                 </div>
             </div>
         );
