@@ -8,12 +8,24 @@
 }
 
 .login-input {
-    color: rgba(0,0,0,0.2);
+    color: rgba(0,0,0,0.7);
     width:100%;
     background-color: rgba(0,0,0,0);
     outline-width: 0;
     font-size:1rem;
     border: solid;
+    border-bottom-color:rgba(0,0,0,0.4);
     border-width:0;
     border-bottom-width: 1px;
+    
+}
+
+.login-input:focus {
+    outline: none;
+    box-shadow:none;
+    border-bottom-color:rgba(0,0,0,0.2);
+}
+
+.login-input::placeholder {
+    color: rgba(0,0,0,0.2);
 }
