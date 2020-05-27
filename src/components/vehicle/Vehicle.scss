@@ -5,7 +5,7 @@ $height-outer:100px;
 
 .vehicle {
     position: relative;
-    display: flex;
+    display: block;
     padding: 20px;
     height: $height-outer;
     width: 100%;
@@ -28,7 +28,6 @@ $height-outer:100px;
     vertical-align: top;
 }
 .vehicle .text {
-    position: relative;
     display: inline-block;
     flex-grow: 1;
     height: $height;
@@ -47,15 +46,13 @@ $height-outer:100px;
 }
 .vehicle .text .material-icons {
     position: absolute;
-    right:0;
-    top:0;
+    right:20px;
+    top:20px;
     color:#aaa;
 }
 
 .vehicle-additional-text-container {
     font-size:12px;
-    position: absolute;
-    margin-top: -12px;
 }
 
 .vehicle-additional-text {
