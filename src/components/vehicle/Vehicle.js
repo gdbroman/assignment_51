@@ -42,7 +42,7 @@ class Tab_page extends React.Component {
     getArrow() {
         if (this.props.arrow) {
             if (this.props.up) {
-                return <span className="material-icons">keyboard_arrow_</span>;
+                return <span className="material-icons">keyboard_arrow_down</span>;
             }
             else {
                 return <span className="material-icons">keyboard_arrow_up</span>;
