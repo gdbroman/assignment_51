@@ -1,3 +1,9 @@
+@import '../../../assets/styles/colors';
+
+.addform .c {
+    max-width: 500px;
+    margin: 0px auto;
+}
 .addfence {
     position: absolute;
     width:50px;
@@ -14,6 +20,7 @@
 .addfence p {
     line-height: 50px;
     font-size: 30px;
+    font-weight: 300;
     color:#fff;
 }
 .addfence:hover {
@@ -36,6 +43,33 @@
     font-size: 18px;
     margin: 20px 0;
 }
+.addform .button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.addform p.label {
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 30px 20px 10px 20px;
+    text-align: left;
+}
+.addform .li {
+    border-top: 1px solid $border-color;
+}
+.addform input {
+    padding:6px 12px;
+    border-radius: 2px;
+    border: 1px solid $border-color;
+    margin:20px 20px 0 20px;
+    min-width: 240px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    color:#333;
+    display: block;
+    text-align: left;
+}
+
 @media screen and (max-width:400px) {
     .addfence {
         bottom:20px;

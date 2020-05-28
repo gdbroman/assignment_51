@@ -2,9 +2,11 @@ import React from 'react';
 import Content from '../../content/Content';
 import StatusButton from '../../status_button/StatusButton';
 import FilterButton from '../../filter/FilterButton'
+import ToggleSetting from '../../setting_toggle/ToggleSetting'
 import FenceList from './fences/FenceList'
 import FilterSide from '../../filter/FilterSide'
 import './Fences.scss'
+import Button from  '../../button/Button';
 import {
   Route,
   Switch,
@@ -57,12 +59,19 @@ class FencesPage extends React.Component {
     this.state = {
       is_filter_active: false
     }
+    this.getTrackerInfo = this.getTrackerInfo.bind(this);
   }
+
   toggleFilter = () => {
     this.setState(prevState => ({
       is_filter_active: !prevState.is_filter_active
     }))
   }
+
+  getTrackerInfo = () => {
+    
+  }
+
   render() { 
     return ( 
         <Content>
@@ -77,11 +86,29 @@ class FencesPage extends React.Component {
             <Route path="/fences/others">
               <FenceList fences={[]}/>
             </Route>
-            <Route path="/fences/add">
+            <Route exact path="/fences/add">
               <div className="addform">
                 <TitleNav title="Add geofence" backlink="/fences/me" />
                 <h2>Please select a device</h2>
-                <TrackersContent vehicles={this.props.vehicles.active} />
+                <Link to="/fences/add/device">
+                  <TrackersContent vehicles={this.props.vehicles.active} sentFunction={this.getTrackerInfo} />
+                </Link>
+              </div>
+            </Route>
+            <Route path="/fences/add/device" >
+              <div className="addform">
+                <TitleNav title="Add geofence" backlink="/fences/me" />
+                <div className="c"> 
+                  <input placeholder="Geo-fence name"></input>
+                  <p className="label">Select Triggers</p>
+                  <ToggleSetting title="Entering geo-fence" />
+                  <ToggleSetting title="Leaving geo-fence" />
+                  <p className="label">Valid Daily Time period</p>
+                  <ToggleSetting title="24 hours" />
+                  <p className="label">Status</p>
+                  <ToggleSetting title="Enabled" />
+                  <Button text="Add" />
+                </div>
               </div>
             </Route>
           </Switch>

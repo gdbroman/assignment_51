@@ -7,7 +7,7 @@ class TrackersContent extends React.Component {
     return this.props.vehicles.map((v) => {
       return (
         <div>
-          <Vehicle info={v} additional_text={true}/>
+          <Vehicle info={v} additional_text={true} />
         </div>
       )
     })
@@ -16,7 +16,7 @@ class TrackersContent extends React.Component {
   render() { 
     return (  
       <React.Fragment>
-        <div className="trackers-vehicle-container">
+        <div className="trackers-vehicle-container" onClick={this.props.sentFunction}>
           {this.getVehicles()}
         </div>
       </React.Fragment>
