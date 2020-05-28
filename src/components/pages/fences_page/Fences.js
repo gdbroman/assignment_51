@@ -8,7 +8,10 @@ import './Fences.scss'
 import {
   Route,
   Switch,
+  Link,
 } from 'react-router-dom';
+import TitleNav from '../../title_nav/TitleNav';
+import TrackersContent from '../trackers_page/trackers/TrackersContent'
 
 const vehicles = [{
   short_from:'Stad 1', 
@@ -74,10 +77,17 @@ class FencesPage extends React.Component {
             <Route path="/fences/others">
               <FenceList fences={[]}/>
             </Route>
+            <Route path="/fences/add">
+              <div className="addform">
+                <TitleNav title="Add geofence" backlink="/fences/me" />
+                <h2>Please select a device</h2>
+                <TrackersContent vehicles={this.props.vehicles.active} />
+              </div>
+            </Route>
           </Switch>
           <FilterButton toggle={this.toggleFilter}/>
           <FilterSide toggle={this.toggleFilter} toggled={this.state.is_filter_active} vehicles={vehicles.map(vehicle => vehicle.vehicle_name).filter((v, i, s) => s.indexOf(v) === i)} />
-          <div class="addfence"><p>+</p></div>
+          <Link to="/fences/add"><div class="addfence"><p>+</p></div></Link>
         </Content>          
     );
   }

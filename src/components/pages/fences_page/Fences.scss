@@ -20,3 +20,25 @@
     background-color: lighten(#1e88e5, 5%);
     box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
+.addform {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    padding-top: 50px;
+    z-index: 7;
+    background-color: #fff;
+}
+.addform h2 {
+    font-size: 18px;
+    margin: 20px 0;
+}
+@media screen and (max-width:400px) {
+    .addfence {
+        bottom:20px;
+        right:20px;
+    }
+}
