@@ -30,7 +30,7 @@ class Tab_page extends React.Component {
     getAdditionalText(info){
         return ( 
             <div className="vehicle-additional-text-container">
-                <p className="vehicle-additional-text fat" style={info.status ? {color:"green"} : {color:"red"}}>{info.status}</p>    
+                <p className="vehicle-additional-text fat" style={info.status==="Active" ? {color:"green"} : {color:"red"}}>{info.status}</p>    
                 <p className="vehicle-additional-text">•</p>
                 <p className="vehicle-additional-text">{info.date}</p>
                 <p className="vehicle-additional-text">•</p>
@@ -57,7 +57,7 @@ class Tab_page extends React.Component {
                 <span className="material-icons">{this.getSymbol()}</span>
                 <div className="text">
                     <p className="name">{this.props.info.name}</p>
-                    <p className="date">{this.props.additional_text?this.props.info.id:this.props.info.date}</p>
+                    <p className="date">{this.props.info.id}</p>
                     {this.getArrow()}
                 </div>
             </div>

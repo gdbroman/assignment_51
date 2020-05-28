@@ -1,0 +1,68 @@
+@import '../../assets/styles/colors';
+
+.filter-icon {
+    font-size:22px;
+    color:white;
+    margin-left:10px;
+}
+
+.filter-container {
+    width:130px;
+    position:absolute;
+    bottom:100px;
+    height:40px;
+    border-radius: 999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $red;
+    user-select: none;
+}
+
+.filter-container:hover {
+    background-color: darken($red, 5%)
+}
+
+.filter-text {
+    font-size:15px;
+    color:white;
+}
+
+@media screen and (max-width:768px) {
+    .filter-container {
+        width:100px;
+        bottom:60px;
+        height:35px;
+        border-radius: 999px;
+    }
+    
+    .filter-text {
+        font-size:14px;
+        color:white;
+    }
+    
+    .filter-icon {
+        font-size:20px;
+        margin-left:8px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .filter-container {
+        width:100px;
+        bottom:40px;
+        right:30px;
+        height:35px;
+        border-radius: 999px;
+    }
+    
+    .filter-text {
+        font-size:14px;
+        color:white;
+    }
+    
+    .filter-icon {
+        font-size:18px;
+        margin-left:6px;
+    }
+}

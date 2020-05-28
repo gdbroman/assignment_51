@@ -39,6 +39,7 @@ $border-color: rgba(0,0,0,0.3);
     margin-top:100px;
     font-size: 18px;
     outline: none;
+    height:30px;
 }
 
 .serial-number-input::placeholder {
@@ -48,6 +49,7 @@ $border-color: rgba(0,0,0,0.3);
 
 .serial-number-input:focus {
     border-bottom-color: lighten($border-color, 55%);
+    box-shadow: none;
 }
 
 .serial-number-information {
@@ -60,9 +62,16 @@ $border-color: rgba(0,0,0,0.3);
     font-size:15px;
     height:60px;
     width:100%;
+    user-select: none;
     position: absolute;
+    border: none;
     bottom:0;
     left:0;
+}
+
+.serial-number-next-button:focus {
+    border: none;
+    outline: none;
 }
 
 .serial-number-next-button:hover {

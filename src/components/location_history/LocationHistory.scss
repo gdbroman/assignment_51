@@ -1,5 +1,8 @@
 @import '../../assets/styles/colors';
 
+.lochist {
+    text-align: center;
+}
 .lochist .date {
     display:none;
 }
@@ -19,9 +22,37 @@
     width: 20px;
 }
 .lochist .choose {
+    display: inline-block;
     margin: 20px;
     text-align: left;
 }
 .lochist .choose p {
-    margin: 22px auto 6px auto;
+    margin: 20px auto 6px auto;
+}
+.lochist .t {
+    display: inline-block;
+    margin: 0 10px;
+}
+.lochist .d {
+    position: relative;
+    margin: 0 10px;
+}
+.lochist .d .react-datepicker-wrapper, .react-datepicker-wrapper input {
+    display: block;
+    width: 100% !important;
+}
+.lochist input {
+    border: 1px solid #aaa;
+    padding: 6px 12px !important;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 2px;
+}
+.lochist .choose .button {
+    display: block;
+    margin: 26px 10px 20px 10px !important;
+    width: calc(100% - 20px);
+}
+.lochist .button p {
+    margin:0;
 }
