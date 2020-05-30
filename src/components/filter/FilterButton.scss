@@ -9,7 +9,7 @@
 .filter-container {
     width:130px;
     position:absolute;
-    bottom:100px;
+    bottom:40px;
     height:40px;
     border-radius: 999px;
     display: flex;
@@ -17,6 +17,7 @@
     align-items: center;
     background-color: $red;
     user-select: none;
+    cursor: pointer;
 }
 
 .filter-container:hover {
@@ -31,7 +32,6 @@
 @media screen and (max-width:768px) {
     .filter-container {
         width:100px;
-        bottom:60px;
         height:35px;
         border-radius: 999px;
     }
@@ -51,7 +51,6 @@
     .filter-container {
         width:100px;
         bottom:40px;
-        right:30px;
         height:35px;
         border-radius: 999px;
     }
@@ -64,5 +63,10 @@
     .filter-icon {
         font-size:18px;
         margin-left:6px;
+    }
+}
+@media screen and (max-width:400px) {
+    .filter-container {
+        bottom:20px;
     }
 }

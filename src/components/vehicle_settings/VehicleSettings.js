@@ -5,7 +5,6 @@ import Setting from '../setting/Setting';
 import { Route, NavLink, } from 'react-router-dom';
 import Alerts from './alerts/Alerts';
 import Journal from './journal/Journal';
-import Fences from './fences/Fences';
 import TitleNav from '../title_nav/TitleNav';
 
 class VehicleSettings extends React.Component {
@@ -18,7 +17,7 @@ class VehicleSettings extends React.Component {
                     <NavLink to='/location/settings/alerts' >
                         <Setting title="Alerts" />
                     </NavLink>
-                    <NavLink to='/location/settings/fences'>
+                    <NavLink to='/fences/me'>
                         <Setting title="Geo-fences" />   
                     </NavLink>
                     <NavLink to='/location/settings/journal'>
@@ -42,9 +41,6 @@ class VehicleSettings extends React.Component {
                 </Route>
                 <Route path="/location/settings/alerts"> 
                     <Alerts info={this.props.info} />
-                </Route>
-                <Route path="/location/settings/fences">  
-                    <Fences info={this.props.info} />
                 </Route>
                 <Route path="/location/settings/journal">  
                     <Journal info={this.props.info} />
