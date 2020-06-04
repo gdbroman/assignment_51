@@ -30,7 +30,7 @@ class Tab_page extends React.Component {
     getAdditionalText(info){
         return ( 
             <div className="vehicle-additional-text-container">
-                <p className="vehicle-additional-text fat" style={info.status==="Active" ? {color:"green"} : {color:"red"}}>{info.status}</p>    
+                <p className="vehicle-additional-text fat" style={info.status==="Active" ? {color:"green"} : {color:"#cf2a44"}}>{info.status}</p>    
                 <p className="vehicle-additional-text">•</p>
                 <p className="vehicle-additional-text">{info.date}</p>
                 <p className="vehicle-additional-text">•</p>
