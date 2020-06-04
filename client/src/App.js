@@ -3,8 +3,8 @@ import Nav from './components/nav/Nav';
 import './App.scss';
 import { BrowserRouter as Router, Redirect, Switch, Route } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar';
-import Login from './components/pages/login_page/Login';
 
+import Login from './components/pages/login_page/Login';
 import LocationPage from './components/pages/location_page/Location';
 import TrackersPage from './components/pages/trackers_page/TrackersPage';
 import FencesPage from './components/pages/fences_page/Fences';
@@ -14,6 +14,8 @@ import UsersPage from './components/pages/users_page/Users';
 import ProfilePage from './components/pages/profile_page/Profile';
 import SupportPage from './components/pages/support_page/Support';
 import LogoutPage from './components/pages/logout_page/Logout';
+
+import {connect} from 'react-redux';
 
 class App extends React.Component {
   constructor(props) {
@@ -64,8 +66,8 @@ class App extends React.Component {
       this.complete()
     }.bind(this), 1000)
   }
-
-  renderRouter () {
+  
+  renderRouter = () => {
     return (
       <Router >
         <div className="page-container">
@@ -109,4 +111,12 @@ class App extends React.Component {
   }
 }
 
-export default App;
+const mapStateToProps = state => ({
+  settings: false
+});
+
+const mapActionToProps = state => ({
+  
+});
+
+export default connect(mapStateToProps, mapActionToProps)(App);
