@@ -24,3 +24,5 @@ yarn-error.log*
 .firebase
 firebase.json
 .firebasesrc
+client/node_modules
+server/node_modules
