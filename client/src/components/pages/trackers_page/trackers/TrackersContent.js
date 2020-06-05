@@ -4,10 +4,10 @@ import './TrackersContent.scss';
 
 class TrackersContent extends React.Component {
   getVehicles(){
-    return this.props.vehicles.map((v) => {
+    return this.props.vehicles.map((v, i) => {
       return (
         <div>
-          <Vehicle info={v} additional_text={true} />
+          <Vehicle key={i} info={v} additional_text={true} />
         </div>
       )
     })

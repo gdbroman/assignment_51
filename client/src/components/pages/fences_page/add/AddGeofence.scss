@@ -1,0 +1,32 @@
+@import '../../../../assets/styles/colors';
+
+.add-geofence-controls {
+    display:flex;
+    height:70px;
+    flex-direction: row;
+    color:white;
+    align-items: center;
+    justify-content: space-around;
+    background-color: $red;
+}
+
+.add-geofence-controls p {
+    color:white;
+}
+
+.add-geofence-container {
+    width:100%;
+    position:absolute;
+    overflow:hidden;
+    bottom:0;
+    right:0;
+    z-index:10;
+    transition: all 0.1s ease-in-out;
+}
+
+.add-fence-map-container {
+    height:calc(100% - 70px);
+    width:100%;
+    position:absolute;
+    z-index:12;
+}

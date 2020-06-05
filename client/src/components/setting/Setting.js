@@ -1,15 +1,13 @@
-import React from 'react';
-import './Setting.scss';
+import React from "react";
+import "./Setting.scss";
 
 class Setting extends React.Component {
   render() {
     return (
-        <div className="li" onClick={this.props.customClickEvent}>
-            <p>{this.props.title}</p>
-            <span class="material-icons">
-            keyboard_arrow_right
-            </span>
-        </div>
+      <div className="li" onClick={this.props.customClickEvent}>
+        <p>{this.props.title}</p>
+        <span className="material-icons">keyboard_arrow_right</span>
+      </div>
     );
   }
 }

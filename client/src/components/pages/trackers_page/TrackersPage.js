@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 import './TrackersPage.scss'
 
-class TrackerPage extends React.Component {
+class TrackersPage extends React.Component {
 
   render() { 
     return ( 
@@ -29,4 +29,4 @@ class TrackerPage extends React.Component {
   }
 }
 
-export default TrackerPage
+export default TrackersPage

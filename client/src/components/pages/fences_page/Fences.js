@@ -14,6 +14,8 @@ import {
 } from 'react-router-dom';
 import TitleNav from '../../title_nav/TitleNav';
 import TrackersContent from '../trackers_page/trackers/TrackersContent'
+import SmallMap from './map/SmallMap'
+import AddGeofence from './add/AddGeofence';
 
 const vehicles = [{
   short_from:'Stad 1', 
@@ -57,10 +59,14 @@ class FencesPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      is_filter_active: false
+      is_filter_active: false,
+      is_add_geofence_active: false
     }
     this.getTrackerInfo = this.getTrackerInfo.bind(this);
   }
+
+  toggleAddGeofence = () => 
+    this.setState(prevState => ({is_add_geofence_active: !prevState.is_add_geofence_active}))
 
   toggleFilter = () => {
     this.setState(prevState => ({
@@ -105,16 +111,18 @@ class FencesPage extends React.Component {
                   <ToggleSetting title="Leaving geo-fence" />
                   <p className="label">Valid Daily Time period</p>
                   <ToggleSetting title="24 hours" />
+                  <SmallMap onClick={this.toggleAddGeofence}/>
                   <p className="label">Status</p>
                   <ToggleSetting title="Enabled" />
                   <Button text="Add" />
                 </div>
               </div>
+              <AddGeofence toggle={this.toggleAddGeofence} active={this.state.is_add_geofence_active}/>
             </Route>
           </Switch>
           <FilterButton toggle={this.toggleFilter}/>
           <FilterSide toggle={this.toggleFilter} toggled={this.state.is_filter_active} vehicles={vehicles.map(vehicle => vehicle.vehicle_name).filter((v, i, s) => s.indexOf(v) === i)} />
-          <Link to="/fences/add"><div class="addfence"><p>+</p></div></Link>
+          <Link to="/fences/add"><div className="addfence"><p>+</p></div></Link>
         </Content>          
     );
   }
