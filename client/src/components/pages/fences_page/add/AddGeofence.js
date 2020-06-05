@@ -12,55 +12,48 @@ import DrawingManager from "react-google-maps/lib/components/drawing/DrawingMana
 
 class AddGeofenceMap extends React.Component {
   state = {
-    savedPolygon: undefined
+    savedPolygon: undefined,
   };
 
-  handlePolygonComplete = (polygon) => {
-    const paths = polygon.getPath().getArray()
-    const coords = paths.map(a => [a.lat(), a.lng()])
+  handlePolygonComplete(polygon) {
+    const paths = polygon.getPath().getArray();
+    const coords = paths.map((a) => [a.lat(), a.lng()]);
+
+    polygon.setPaths([]);
+    this.setDrawingMode(null);
+    this.setOptions({ drawingControlOptions: { drawingModes: [] } });
+
     //this.setState({savedPolygon: coords})
-    console.log(coords)
+    console.log(coords);
   }
   drawingManager = () => (
-    <DrawingManager
-      onPolygonComplete={this.handlePolygonComplete}
-      defaultDrawingMode={window.google.maps.drawing.OverlayType.POLYGON}
-      defaultOptions={{
-        drawingControl: true,
-        drawingControlOptions: {
-          position: window.google.maps.ControlPosition.TOP_CENTER,
-          drawingModes: [
-            window.google.maps.drawing.OverlayType.POLYGON,
-            window.google.maps.drawing.OverlayType.CIRCLE,
-          ],
-        },
-        polygonOptions: {
-          fillColor: "#ffff00",
-          fillOpacity: 1,
-          strokeWeight: 5,
-          clickable: false,
-          editable: true,
-          zIndex: 15,
-        },
-      }}
-    />
+    <React.Fragment>
+      <DrawingManager
+        onPolygonComplete={this.handlePolygonComplete}
+        disable={!!this.state.savedPolygon}
+        defaultDrawingMode={window.google.maps.drawing.OverlayType.POLYGON}
+        defaultOptions={{
+          drawingControl: true,
+          drawingControlOptions: {
+            position: window.google.maps.ControlPosition.TOP_CENTER,
+            drawingModes: [
+              window.google.maps.drawing.OverlayType.POLYGON,
+              window.google.maps.drawing.OverlayType.CIRCLE,
+            ],
+          },
+          polygonOptions: {
+            fillColor: "#ffff00",
+            fillOpacity: 1,
+            strokeWeight: 5,
+            clickable: false,
+            editable: true,
+            zIndex: 15,
+          },
+        }}
+      />
+      <button style={{position:"absolute", top:"50%", left:"50%", zIndex:412}}/>
+    </React.Fragment>
   );
-  displayMarkers = () => {
-    return this.state.coords.map((store, index) => {
-      return (
-        <Marker
-          key={index}
-          id={index}
-          position={{
-            lat: store.lat,
-            lng: store.lng,
-          }}
-          text="My marker"
-          onClick={() => console.log("You clicked me!")}
-        />
-      );
-    });
-  };
   render() {
     return (
       <GoogleMaps
