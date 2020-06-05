@@ -7,6 +7,10 @@ import Alerts from './alerts/Alerts';
 import Journal from './journal/Journal';
 import TitleNav from '../title_nav/TitleNav';
 
+const getSettingInfo = state => {
+    return state.loggedIn;
+}
+
 class VehicleSettings extends React.Component {
     render() {
         return (
@@ -14,6 +18,7 @@ class VehicleSettings extends React.Component {
                 <Route exact path="/location/settings"> 
                     <TitleNav title="Settings" backlink="/location" />
                     <Vehicle info={this.props.info} additional_text={true} />
+                    <p>{getSettingInfo ? "a" : "b"}</p>
                     <NavLink to='/location/settings/alerts' >
                         <Setting title="Alerts" />
                     </NavLink>
